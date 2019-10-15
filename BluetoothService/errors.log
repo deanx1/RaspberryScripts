@@ -1,0 +1,377 @@
+[2019-10-01 13:22:34,478] : [ERROR] : [bleServerLogger] : [bleServer.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-01 13:26:04,319] : [ERROR] : [bleServerLogger] : [bleServer.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-01 13:26:04,322] : [ERROR] : [bleServerLogger] : [bleServer.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-01 13:26:04,326] : [ERROR] : [bleServerLogger] : [bleServer.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleServer.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-01 13:33:58,251] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-01 13:51:06,418] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-01 13:51:41,713] : [ERROR] : [bleServerLogger] : [bleServer.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-01 14:03:59,687] : [ERROR] : [bleServerLogger] : [bleServer.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-01 14:08:39,969] : [ERROR] : [bleServerLogger] : [bleServer.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-01 14:08:39,971] : [ERROR] : [bleServerLogger] : [bleServer.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-01 14:08:39,976] : [ERROR] : [bleServerLogger] : [bleServer.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleServer.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-01 14:08:40,898] : [ERROR] : [bleServerLogger] : [bleServer.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-01 14:09:53,037] : [ERROR] : [bleServerLogger] : [bleServer.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-01 14:09:53,039] : [ERROR] : [bleServerLogger] : [bleServer.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-01 14:09:53,041] : [ERROR] : [bleServerLogger] : [bleServer.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleServer.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-01 14:09:56,444] : [ERROR] : [bleServerLogger] : [bleServer.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-08 13:27:15,313] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Failed to connect to "BluetoothServices" on address B8:27:EB:B6:74:28 with port 1
+Traceback (most recent call last):
+  File "bleClient.py", line 83, in getBluetoothConnection
+    self.clientSocket.connect((bleServiceInfo['host'], bleServiceInfo['port']))
+  File "<string>", line 5, in connect
+BluetoothError: (16, 'Device or resource busy')
+[2019-10-08 13:27:15,316] : [ERROR] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Failed to load content from the text.json
+Traceback (most recent call last):
+  File "bleClient.py", line 90, in readJsonFile
+    jsonFileObj = open(self.lsonFile,"r")
+AttributeError: bleClient instance has no attribute 'lsonFile'
+[2019-10-08 13:27:15,319] : [ERROR] : [bleClientLogger] : [bleClient.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleClient.py", line 110, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-08 13:27:53,156] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 13:32:41,490] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Failed to connect to "BluetoothServices" on address B8:27:EB:B6:74:28 with port 1
+Traceback (most recent call last):
+  File "bleClient.py", line 83, in getBluetoothConnection
+    self.clientSocket.connect((bleServiceInfo['host'], bleServiceInfo['port']))
+  File "<string>", line 5, in connect
+BluetoothError: (16, 'Device or resource busy')
+[2019-10-08 13:32:41,492] : [ERROR] : [bleClientLogger] : [bleClient.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleClient.py", line 110, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-08 13:33:02,622] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 13:38:29,383] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 13:48:04,927] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 14:09:06,945] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Failed to connect to "BluetoothServices" on address B8:27:EB:B6:74:28 with port 1
+Traceback (most recent call last):
+  File "bleClient.py", line 83, in getBluetoothConnection
+    self.clientSocket.connect((bleServiceInfo['host'], bleServiceInfo['port']))
+  File "<string>", line 5, in connect
+BluetoothError: (111, 'Connection refused')
+[2019-10-08 14:09:06,946] : [ERROR] : [bleClientLogger] : [bleClient.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleClient.py", line 110, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-08 14:11:54,555] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 14:13:37,678] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Failed to connect to "BluetoothServices" on address B8:27:EB:B6:74:28 with port 1
+Traceback (most recent call last):
+  File "bleClient.py", line 83, in getBluetoothConnection
+    self.clientSocket.connect((bleServiceInfo['host'], bleServiceInfo['port']))
+  File "<string>", line 5, in connect
+BluetoothError: (111, 'Connection refused')
+[2019-10-08 14:13:37,684] : [ERROR] : [bleClientLogger] : [bleClient.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleClient.py", line 110, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-08 14:29:06,526] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 14:32:48,627] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 14:37:16,646] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 14:41:40,806] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 14:45:00,721] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 14:49:57,066] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 15:00:38,558] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-08 15:00:44,496] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-08 15:01:13,374] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-08 15:03:18,751] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 15:04:23,220] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 15:12:22,610] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 15:23:19,109] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-09 11:59:25,314] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 12:34:39,405] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 12:42:17,428] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 12:43:05,336] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-09 12:44:02,051] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 12:54:05,555] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 12:54:50,248] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 12:58:47,049] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 13:17:10,860] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 13:17:46,923] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-09 13:21:39,265] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 13:26:08,790] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-09 15:08:03,922] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-15 11:46:58,620] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-15 12:25:30,344] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-15 12:33:59,639] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt

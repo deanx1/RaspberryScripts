@@ -1,0 +1,840 @@
+[2019-10-01 13:22:34,477] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-01 13:22:34,478] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-01 13:22:34,478] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-01 13:22:34,478] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-01 13:22:34,478] : [ERROR] : [bleServerLogger] : [bleServer.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-01 13:26:04,319] : [ERROR] : [bleServerLogger] : [bleServer.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-01 13:26:04,322] : [ERROR] : [bleServerLogger] : [bleServer.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-01 13:26:04,323] : [INFO] : [bleServerLogger] : [bleServer.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7fe4f4ba7810>
+[2019-10-01 13:26:04,324] : [INFO] : [bleServerLogger] : [bleServer.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-01 13:26:04,325] : [INFO] : [bleServerLogger] : [bleServer.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-01 13:26:04,326] : [ERROR] : [bleServerLogger] : [bleServer.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleServer.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-01 13:33:58,251] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-01 13:33:58,251] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-01 13:33:58,251] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-01 13:33:58,252] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-01 13:51:06,418] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-01 13:51:06,418] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-01 13:51:06,418] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-01 13:51:06,419] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-01 13:51:41,712] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-01 13:51:41,713] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-01 13:51:41,713] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-01 13:51:41,713] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-01 13:51:41,713] : [ERROR] : [bleServerLogger] : [bleServer.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-01 14:03:59,685] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-01 14:03:59,686] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-01 14:03:59,686] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-01 14:03:59,687] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-01 14:03:59,687] : [ERROR] : [bleServerLogger] : [bleServer.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-01 14:08:39,969] : [ERROR] : [bleServerLogger] : [bleServer.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-01 14:08:39,971] : [ERROR] : [bleServerLogger] : [bleServer.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-01 14:08:39,973] : [INFO] : [bleServerLogger] : [bleServer.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7fc21e678810>
+[2019-10-01 14:08:39,974] : [INFO] : [bleServerLogger] : [bleServer.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-01 14:08:39,975] : [INFO] : [bleServerLogger] : [bleServer.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-01 14:08:39,976] : [ERROR] : [bleServerLogger] : [bleServer.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleServer.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-01 14:08:40,897] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-01 14:08:40,897] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-01 14:08:40,897] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-01 14:08:40,898] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-01 14:08:40,898] : [ERROR] : [bleServerLogger] : [bleServer.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-01 14:09:53,037] : [ERROR] : [bleServerLogger] : [bleServer.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-01 14:09:53,039] : [ERROR] : [bleServerLogger] : [bleServer.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-01 14:09:53,041] : [INFO] : [bleServerLogger] : [bleServer.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7fd0a5c6e810>
+[2019-10-01 14:09:53,041] : [INFO] : [bleServerLogger] : [bleServer.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-01 14:09:53,041] : [INFO] : [bleServerLogger] : [bleServer.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-01 14:09:53,041] : [ERROR] : [bleServerLogger] : [bleServer.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleServer.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-01 14:09:56,444] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-01 14:09:56,444] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-01 14:09:56,444] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-01 14:09:56,444] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-01 14:09:56,444] : [ERROR] : [bleServerLogger] : [bleServer.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-08 13:26:27,549] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 13:26:27,549] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 13:27:11,437] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-08 13:27:15,304] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-08 13:27:15,305] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-08 13:27:15,306] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-08 13:27:15,306] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-08 13:27:15,307] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-08 13:27:15,308] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-08 13:27:15,308] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-08 13:27:15,309] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-08 13:27:15,310] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-08 13:27:15,311] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-08 13:27:15,312] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 13:27:15,312] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-08 13:27:15,313] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Failed to connect to "BluetoothServices" on address B8:27:EB:B6:74:28 with port 1
+Traceback (most recent call last):
+  File "bleClient.py", line 83, in getBluetoothConnection
+    self.clientSocket.connect((bleServiceInfo['host'], bleServiceInfo['port']))
+  File "<string>", line 5, in connect
+BluetoothError: (16, 'Device or resource busy')
+[2019-10-08 13:27:15,316] : [ERROR] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Failed to load content from the text.json
+Traceback (most recent call last):
+  File "bleClient.py", line 90, in readJsonFile
+    jsonFileObj = open(self.lsonFile,"r")
+AttributeError: bleClient instance has no attribute 'lsonFile'
+[2019-10-08 13:27:15,318] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-08 13:27:15,318] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-08 13:27:15,319] : [ERROR] : [bleClientLogger] : [bleClient.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleClient.py", line 110, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-08 13:27:15,321] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-08 13:27:28,368] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 13:27:28,368] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 13:27:53,156] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 13:27:53,160] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 13:31:41,027] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 13:31:41,027] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 13:32:41,484] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-08 13:32:41,486] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-08 13:32:41,486] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-08 13:32:41,487] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-08 13:32:41,488] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-08 13:32:41,488] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-08 13:32:41,489] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-08 13:32:41,489] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-08 13:32:41,490] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-08 13:32:41,490] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-08 13:32:41,490] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 13:32:41,490] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-08 13:32:41,490] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Failed to connect to "BluetoothServices" on address B8:27:EB:B6:74:28 with port 1
+Traceback (most recent call last):
+  File "bleClient.py", line 83, in getBluetoothConnection
+    self.clientSocket.connect((bleServiceInfo['host'], bleServiceInfo['port']))
+  File "<string>", line 5, in connect
+BluetoothError: (16, 'Device or resource busy')
+[2019-10-08 13:32:41,491] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7ffb58e76780>
+[2019-10-08 13:32:41,491] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-08 13:32:41,492] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-08 13:32:41,492] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-08 13:32:41,492] : [ERROR] : [bleClientLogger] : [bleClient.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleClient.py", line 110, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-08 13:32:41,492] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-08 13:32:58,459] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 13:32:58,459] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 13:33:02,622] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 13:33:02,626] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 13:33:08,750] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 13:33:08,750] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 13:34:09,830] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-08 13:34:09,831] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-08 13:34:09,832] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-08 13:34:09,832] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-08 13:34:09,833] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-08 13:34:09,834] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-08 13:34:09,834] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-08 13:34:09,835] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-08 13:34:09,835] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-08 13:34:09,836] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-08 13:34:09,837] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 13:34:09,838] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-08 13:34:13,469] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connected successfully to BluetoothServices 
+[2019-10-08 13:34:13,470] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f19d0b25780>
+[2019-10-08 13:34:13,471] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-08 13:34:13,471] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-08 13:34:13,471] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-08 13:34:13,972] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Data sent successfully over bluetooth connection
+[2019-10-08 13:34:13,973] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-08 13:38:08,761] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 13:38:08,761] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 13:38:19,124] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-08 13:38:29,382] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-08 13:38:29,383] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 13:38:29,385] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 13:40:35,269] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 13:40:35,269] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 13:41:36,657] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-08 13:41:36,658] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-08 13:41:36,658] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-08 13:41:36,658] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-08 13:41:36,659] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-08 13:41:36,659] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-08 13:41:36,660] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-08 13:41:36,660] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-08 13:41:36,660] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-08 13:41:36,661] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-08 13:41:36,661] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 13:41:36,661] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-08 13:41:36,972] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connected successfully to BluetoothServices 
+[2019-10-08 13:41:36,973] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7ff635439780>
+[2019-10-08 13:41:36,973] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-08 13:41:36,974] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-08 13:41:36,974] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-08 13:41:37,476] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Data sent successfully over bluetooth connection
+[2019-10-08 13:41:37,476] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-08 13:42:23,056] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 13:42:23,056] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 13:43:10,502] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-08 13:43:10,503] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-08 13:43:10,504] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-08 13:43:10,505] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-08 13:43:10,506] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-08 13:43:10,507] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-08 13:43:10,507] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-08 13:43:10,508] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-08 13:43:10,509] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-08 13:43:10,510] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-08 13:43:10,510] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 13:43:10,511] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-08 13:43:14,858] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connected successfully to BluetoothServices 
+[2019-10-08 13:43:14,858] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f4db488e780>
+[2019-10-08 13:43:14,858] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-08 13:43:14,858] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-08 13:43:14,859] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-08 13:43:15,360] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Data sent successfully over bluetooth connection
+[2019-10-08 13:43:15,361] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-08 13:47:23,895] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 13:47:23,895] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 13:48:04,927] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 13:48:04,930] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 13:48:06,170] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 13:48:06,170] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 13:48:52,521] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-08 13:49:42,726] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-08 13:49:42,727] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-08 13:49:42,728] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-08 13:49:42,729] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-08 13:49:42,730] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-08 13:49:42,731] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-08 13:49:42,733] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-08 13:49:42,734] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-08 13:49:42,736] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-08 13:49:42,738] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-08 13:49:42,745] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 13:49:42,746] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-08 13:49:42,944] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connected successfully to BluetoothServices 
+[2019-10-08 13:49:42,944] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7fe728554780>
+[2019-10-08 13:49:42,944] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-08 13:49:42,944] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-08 13:49:42,945] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-08 13:49:43,445] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Data sent successfully over bluetooth connection
+[2019-10-08 13:49:43,446] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-08 14:08:11,660] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 14:08:11,660] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 14:09:06,804] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-08 14:09:06,805] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-08 14:09:06,806] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-08 14:09:06,807] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-08 14:09:06,808] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-08 14:09:06,809] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-08 14:09:06,810] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-08 14:09:06,811] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-08 14:09:06,812] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-08 14:09:06,814] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-08 14:09:06,815] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 14:09:06,816] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-08 14:09:06,945] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Failed to connect to "BluetoothServices" on address B8:27:EB:B6:74:28 with port 1
+Traceback (most recent call last):
+  File "bleClient.py", line 83, in getBluetoothConnection
+    self.clientSocket.connect((bleServiceInfo['host'], bleServiceInfo['port']))
+  File "<string>", line 5, in connect
+BluetoothError: (111, 'Connection refused')
+[2019-10-08 14:09:06,946] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7fb36ac78780>
+[2019-10-08 14:09:06,946] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-08 14:09:06,946] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-08 14:09:06,946] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-08 14:09:06,946] : [ERROR] : [bleClientLogger] : [bleClient.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleClient.py", line 110, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-08 14:09:06,946] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-08 14:09:52,383] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 14:09:52,384] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 14:10:00,397] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-08 14:11:54,555] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 14:11:54,559] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 14:12:00,072] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 14:12:00,072] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 14:13:13,968] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-08 14:13:37,541] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-08 14:13:37,542] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-08 14:13:37,543] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-08 14:13:37,544] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-08 14:13:37,544] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-08 14:13:37,545] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-08 14:13:37,546] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-08 14:13:37,547] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-08 14:13:37,547] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-08 14:13:37,548] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-08 14:13:37,549] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 14:13:37,549] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-08 14:13:37,678] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Failed to connect to "BluetoothServices" on address B8:27:EB:B6:74:28 with port 1
+Traceback (most recent call last):
+  File "bleClient.py", line 83, in getBluetoothConnection
+    self.clientSocket.connect((bleServiceInfo['host'], bleServiceInfo['port']))
+  File "<string>", line 5, in connect
+BluetoothError: (111, 'Connection refused')
+[2019-10-08 14:13:37,681] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f607e3be780>
+[2019-10-08 14:13:37,682] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-08 14:13:37,683] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-08 14:13:37,683] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-08 14:13:37,684] : [ERROR] : [bleClientLogger] : [bleClient.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleClient.py", line 110, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-08 14:13:37,685] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-08 14:28:28,232] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 14:28:28,232] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 14:29:06,526] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 14:29:06,530] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 14:29:24,029] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 14:29:24,030] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 14:31:10,020] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-08 14:32:48,625] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-08 14:32:48,627] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 14:32:48,630] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 14:33:56,915] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 14:33:56,916] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 14:35:35,337] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-08 14:37:16,645] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-08 14:37:16,646] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 14:37:16,648] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 14:38:23,490] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 14:38:23,490] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 14:40:02,839] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-08 14:41:40,804] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-08 14:41:40,806] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 14:41:40,808] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 14:42:51,884] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 14:42:51,885] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 14:44:28,740] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-08 14:45:00,721] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 14:45:00,724] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 14:47:16,689] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 14:47:16,689] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 14:48:54,791] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-08 14:49:57,064] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-08 14:49:57,066] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 14:49:57,067] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 15:00:38,558] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 15:00:38,558] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 15:00:38,558] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-08 15:00:38,559] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 15:00:44,496] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 15:00:44,496] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 15:00:44,496] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-08 15:00:44,496] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 15:01:13,374] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 15:01:13,374] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 15:01:13,374] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-08 15:01:13,375] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 15:01:33,934] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 15:01:33,934] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 15:02:25,988] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-08 15:03:18,751] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-08 15:03:18,751] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 15:03:18,752] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 15:03:50,584] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 15:03:50,584] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 15:04:23,220] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-08 15:04:23,223] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 15:10:19,597] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 15:10:19,597] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 15:11:17,574] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-08 15:12:22,608] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-08 15:12:22,610] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-08 15:12:22,613] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-08 15:22:12,978] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-08 15:22:12,978] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-08 15:23:10,177] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-08 15:23:19,109] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-08 15:23:19,110] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 11:58:42,868] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 11:58:42,869] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 11:59:04,308] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-09 11:59:25,313] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-09 11:59:25,314] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 11:59:25,319] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 12:33:56,598] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 12:33:56,598] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 12:34:16,413] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-09 12:34:39,404] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-09 12:34:39,405] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 12:34:39,405] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 12:41:39,240] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 12:41:39,240] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 12:41:58,528] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-09 12:42:17,427] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-09 12:42:17,428] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 12:42:17,431] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 12:42:56,996] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 12:42:56,997] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 12:43:05,336] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-09 12:43:05,341] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 12:43:27,783] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 12:43:27,783] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 12:43:44,649] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-09 12:44:02,049] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-09 12:44:02,051] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 12:44:02,055] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 12:53:29,050] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 12:53:29,050] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 12:53:47,520] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-09 12:54:05,554] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-09 12:54:05,555] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 12:54:05,556] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 12:54:14,651] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 12:54:14,651] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 12:54:32,297] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-09 12:54:50,247] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-09 12:54:50,248] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 12:54:50,250] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 12:58:11,586] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 12:58:11,587] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 12:58:28,840] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-09 12:58:47,048] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-09 12:58:47,049] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 12:58:47,050] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 13:16:31,911] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 13:16:31,911] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 13:16:51,400] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-09 13:17:10,859] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-09 13:17:10,860] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 13:17:10,862] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 13:17:23,552] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 13:17:23,552] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 13:17:46,923] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-09 13:17:46,926] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 13:20:59,494] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 13:20:59,494] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 13:21:18,915] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-09 13:21:39,263] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-09 13:21:39,265] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 13:21:39,267] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 13:23:18,185] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 13:23:18,186] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 13:23:33,164] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-09 13:23:33,165] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-09 13:23:33,166] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-09 13:23:33,167] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-09 13:23:33,168] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-09 13:23:33,169] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-09 13:23:33,170] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-09 13:23:33,170] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-09 13:23:33,171] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-09 13:23:33,173] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-09 13:23:33,173] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 13:23:33,174] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-09 13:23:34,087] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connected successfully to BluetoothServices 
+[2019-10-09 13:23:34,089] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7fb41285b780>
+[2019-10-09 13:23:34,090] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-09 13:23:34,091] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-09 13:23:34,091] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-09 13:23:34,593] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Data sent successfully over bluetooth connection
+[2019-10-09 13:23:34,593] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-09 13:25:34,053] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 13:25:34,053] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 13:26:08,790] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-09 13:26:08,794] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 13:26:18,035] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 13:26:18,035] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 13:26:33,847] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-09 13:26:33,848] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-09 13:26:33,848] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-09 13:26:33,849] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-09 13:26:33,849] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-09 13:26:33,850] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-09 13:26:33,850] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-09 13:26:33,851] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-09 13:26:33,852] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-09 13:26:33,852] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-09 13:26:33,853] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 13:26:33,853] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-09 13:26:34,702] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connected successfully to BluetoothServices 
+[2019-10-09 13:26:34,702] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7fa64da0f780>
+[2019-10-09 13:26:34,702] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-09 13:26:34,703] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-09 13:26:34,703] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-09 13:26:35,204] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Data sent successfully over bluetooth connection
+[2019-10-09 13:26:35,206] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-09 15:07:21,641] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 15:07:21,642] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 15:07:37,102] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-09 15:08:03,921] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 3 attempt
+[2019-10-09 15:08:03,922] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 56, in getBluetoothServices
+    if not bleService: raise SystemExit(), KeyboardInterrupt()
+TypeError: instance exception may not have a separate value
+[2019-10-09 15:08:03,923] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 15:08:06,371] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 15:08:06,372] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 15:08:27,012] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-09 15:08:27,013] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-09 15:08:27,013] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-09 15:08:27,014] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-09 15:08:27,014] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-09 15:08:27,014] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-09 15:08:27,015] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-09 15:08:27,015] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-09 15:08:27,015] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-09 15:08:27,016] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-09 15:08:27,016] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 15:08:27,017] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-09 15:08:31,896] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connected successfully to BluetoothServices 
+[2019-10-09 15:08:31,897] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f5216d9e780>
+[2019-10-09 15:08:31,898] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-09 15:08:31,899] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-09 15:08:31,900] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-09 15:08:32,401] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Data sent successfully over bluetooth connection
+[2019-10-09 15:08:32,402] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-09 15:11:59,474] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-09 15:11:59,474] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-09 15:12:07,201] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-09 15:12:26,389] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-09 15:12:26,390] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-09 15:12:26,391] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-09 15:12:26,391] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-09 15:12:26,392] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-09 15:12:26,393] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-09 15:12:26,394] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-09 15:12:26,395] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-09 15:12:26,396] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-09 15:12:26,396] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-09 15:12:26,397] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-09 15:12:26,398] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-09 15:12:27,119] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connected successfully to BluetoothServices 
+[2019-10-09 15:12:27,120] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f8dc27e8780>
+[2019-10-09 15:12:27,121] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-09 15:12:27,121] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-09 15:12:27,122] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-09 15:12:27,624] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Data sent successfully over bluetooth connection
+[2019-10-09 15:12:27,625] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-15 11:46:53,180] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-15 11:46:53,181] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-15 11:46:58,620] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-15 11:46:58,627] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-15 11:50:00,518] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-15 11:50:00,518] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-15 11:50:29,491] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-15 11:50:29,493] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-15 11:50:29,493] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-15 11:50:29,494] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-15 11:50:29,495] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-15 11:50:29,496] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-15 11:50:29,496] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-15 11:50:29,497] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-15 11:50:29,498] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-15 11:50:29,499] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-15 11:50:29,499] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-15 11:50:29,500] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-15 11:50:34,523] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connected successfully to BluetoothServices 
+[2019-10-15 11:50:34,524] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7fc065ebc780>
+[2019-10-15 11:50:34,526] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-15 11:50:34,527] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-15 11:50:34,527] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-15 11:50:35,028] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Data sent successfully over bluetooth connection
+[2019-10-15 11:50:35,030] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-15 12:24:59,560] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-15 12:24:59,560] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-15 12:25:26,707] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Re-connecting  Bluetooth services : 2 attempt
+[2019-10-15 12:25:30,344] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-15 12:25:30,347] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-15 12:26:54,706] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-15 12:26:54,706] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-15 12:27:30,974] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-15 12:27:30,974] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-15 12:27:30,974] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-15 12:27:30,974] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-15 12:27:30,975] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-15 12:27:30,975] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-15 12:27:30,975] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-15 12:27:30,975] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Provider	: None
+[2019-10-15 12:27:30,976] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Port		: 1
+[2019-10-15 12:27:30,976] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Description	: None
+[2019-10-15 12:27:30,976] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-15 12:27:30,976] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-15 12:27:35,444] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothConnection] : Connected successfully to BluetoothServices 
+[2019-10-15 12:27:35,445] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f316f8c8780>
+[2019-10-15 12:27:35,446] : [INFO] : [bleClientLogger] : [bleClient.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-15 12:27:35,447] : [INFO] : [bleClientLogger] : [bleClient.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-15 12:27:35,448] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-15 12:27:35,950] : [INFO] : [bleClientLogger] : [bleClient.py] : [sendData] : Data sent successfully over bluetooth connection
+[2019-10-15 12:27:35,950] : [INFO] : [bleClientLogger] : [bleClient.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-15 12:33:55,372] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-15 12:33:55,372] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-15 12:33:59,639] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-15 12:33:59,643] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
