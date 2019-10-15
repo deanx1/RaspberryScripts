@@ -838,3 +838,70 @@ Traceback (most recent call last):
     results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
 KeyboardInterrupt
 [2019-10-15 12:33:59,643] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-15 13:03:08,071] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-15 13:03:08,071] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-15 13:03:08,072] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-15 13:03:08,072] : [INFO] : [bleServerLogger] : [bleServer.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-15 13:03:08,072] : [ERROR] : [bleServerLogger] : [bleServer.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-15 13:03:14,991] : [ERROR] : [bleServerLogger] : [bleServer.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-15 13:03:14,993] : [ERROR] : [bleServerLogger] : [bleServer.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleServer.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-15 13:03:14,995] : [INFO] : [bleServerLogger] : [bleServer.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7f8497e5f810>
+[2019-10-15 13:03:14,996] : [INFO] : [bleServerLogger] : [bleServer.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-15 13:03:14,997] : [INFO] : [bleServerLogger] : [bleServer.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-15 13:03:14,997] : [ERROR] : [bleServerLogger] : [bleServer.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleServer.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-15 13:03:21,293] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-15 13:03:21,293] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-15 13:03:24,146] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-15 13:03:24,151] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-15 13:03:44,306] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-15 13:03:44,306] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-15 13:03:47,872] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-15 13:03:47,877] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-15 13:03:56,030] : [INFO] : [bleClientLogger] : [bleClient.py] : [<module>] : Setup logging configuration
+[2019-10-15 13:03:56,031] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-15 13:03:59,257] : [ERROR] : [bleClientLogger] : [bleClient.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleClient.py", line 51, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-15 13:03:59,262] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
