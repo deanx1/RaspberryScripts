@@ -35,14 +35,16 @@ def startLogging(
 class bleClient:
     def __init__(self, clientSocket=None):
         if clientSocket is None:
-            self.clientSocket = 11
+            # self.clientSocket = 11
+            self.clientSocket = clientSocket
             self.bleService = None
             self.addr = None
             self.uuid = "4b0164aa-1820-444e-83d4-3c702cfec373"
             self.jsonFile ="text.json"
             self.jsonObj = None
         else:
-            self.clientSocket = 11
+            # self.clientSocket = 11
+            self.clientSocket = clientSocket
 
     def getBluetoothServices(self):
         try:

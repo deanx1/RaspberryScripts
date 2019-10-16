@@ -36,14 +36,18 @@ class bleServer:
     def __init__(self, serverSocket=None, clientSocket=None):
         if serverSocket is None:
             self.dataObj = None
-            self.serverSocket = 12
-            self.clientSocket = 11
+            # self.serverSocket = 12
+            # self.clientSocket = 11
+            self.serverSocket = serverSocket
+            self.clientSocket = clientSocket
             self.serviceName="BluetoothServices"
             self.jsonFile ="text.json"
             self.uuid = "4b0164aa-1820-444e-83d4-3c702cfec373"
         else:
-            self.serverSocket = 12
-            self.clientSocket = 11
+            # self.serverSocket = 12
+            # self.clientSocket = 11
+            self.serverSocket = serverSocket
+            self.clientSocket = clientSocket
 
     def getBluetoothSocket(self):
         try:
