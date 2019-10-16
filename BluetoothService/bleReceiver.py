@@ -162,7 +162,7 @@ class bleServer:
 
 if __name__ == '__main__':
     startLogging()
-    bleSvr = bleServer()
+    bleSvr = bleServer(12, 11)
     bleSvr.start()
     bleSvr.receive()
     bleSvr.stop()

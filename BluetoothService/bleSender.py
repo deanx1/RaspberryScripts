@@ -151,7 +151,7 @@ class bleClient:
 if __name__ == '__main__':
     startLogging()
     logger.info("Setup logging configuration")
-    bleClnt = bleClient()
+    bleClnt = bleClient(11)
     bleClnt.start()
     bleClnt.send()
     bleClnt.stop()
