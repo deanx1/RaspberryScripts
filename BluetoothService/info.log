@@ -905,3 +905,322 @@ Traceback (most recent call last):
     results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
 KeyboardInterrupt
 [2019-10-15 13:03:59,262] : [INFO] : [bleClientLogger] : [bleClient.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-15 14:51:51,785] : [INFO] : [bleClientLogger] : [bleSender.py] : [<module>] : Setup logging configuration
+[2019-10-15 14:51:51,785] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Searching for  Bluetooth services ...
+[2019-10-15 14:52:24,861] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Found  Bluetooth services ..
+[2019-10-15 14:52:24,863] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Protocol	: RFCOMM
+[2019-10-15 14:52:24,865] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Name		: BluetoothServices
+[2019-10-15 14:52:24,866] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Service-id	: 94F39D29-7D6D-437D-973B-FBA39E49D4EE
+[2019-10-15 14:52:24,866] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Profiles	: [('1101', 256)]
+[2019-10-15 14:52:24,867] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Service-class	: []
+[2019-10-15 14:52:24,868] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Host		: B8:27:EB:B6:74:28
+[2019-10-15 14:52:24,869] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Provider	: None
+[2019-10-15 14:52:24,869] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Port		: 1
+[2019-10-15 14:52:24,870] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Description	: None
+[2019-10-15 14:52:24,871] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothSocket] : Bluetooth client socket successfully created for RFCOMM service  ...
+[2019-10-15 14:52:24,872] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Connecting to "BluetoothServices" on B8:27:EB:B6:74:28 with port 1
+[2019-10-15 14:52:26,701] : [INFO] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Connected successfully to BluetoothServices 
+[2019-10-15 14:52:26,702] : [INFO] : [bleClientLogger] : [bleSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f0047238780>
+[2019-10-15 14:52:26,702] : [INFO] : [bleClientLogger] : [bleSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-10-15 14:52:26,703] : [INFO] : [bleClientLogger] : [bleSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-10-15 14:52:26,703] : [INFO] : [bleClientLogger] : [bleSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-10-15 14:52:27,204] : [INFO] : [bleClientLogger] : [bleSender.py] : [sendData] : Data sent successfully over bluetooth connection
+[2019-10-15 14:52:27,205] : [INFO] : [bleClientLogger] : [bleSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-10-15 14:57:00,052] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-15 14:57:00,052] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-15 14:57:00,052] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-15 14:57:00,052] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-15 14:57:00,052] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-15 14:57:26,593] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-15 14:57:26,595] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-15 14:57:26,596] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7f47d7d49810>
+[2019-10-15 14:57:26,597] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-15 14:57:26,598] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-15 14:57:26,598] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-15 15:04:30,213] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-15 15:04:30,213] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-15 15:04:30,214] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-15 15:04:30,214] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-15 15:04:30,214] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-15 15:07:39,784] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-15 15:07:39,787] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-15 15:07:39,789] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7f27930b7810>
+[2019-10-15 15:07:39,790] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-15 15:07:39,791] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-15 15:07:39,791] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-15 15:08:00,991] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-15 15:08:00,991] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-15 15:08:00,992] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-15 15:08:00,992] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-15 15:08:00,992] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-15 15:21:41,343] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-15 15:21:41,346] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-15 15:21:41,348] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7f4059a2c810>
+[2019-10-15 15:21:41,349] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-15 15:21:41,350] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-15 15:21:41,351] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-15 15:29:16,622] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-15 15:29:16,623] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-15 15:29:16,623] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-15 15:29:16,623] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-15 15:29:16,623] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-15 18:59:48,163] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-15 18:59:48,163] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-15 18:59:48,164] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7f44dd5d3810>
+[2019-10-15 18:59:48,164] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-15 18:59:48,164] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-15 18:59:48,164] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-16 13:06:03,064] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-16 13:06:03,065] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-16 13:06:03,065] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-16 13:06:03,065] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-16 13:06:03,065] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-16 13:10:59,330] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 13:10:59,332] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 13:10:59,335] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7f566f751810>
+[2019-10-16 13:10:59,336] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-16 13:10:59,337] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-16 13:10:59,338] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-16 13:14:35,677] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-16 13:14:35,678] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-16 13:14:35,678] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-16 13:14:35,678] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-16 13:14:35,678] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 77, in advertiseBluetoothService
+    profiles = [ SERIAL_PORT_PROFILE ],
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 176, in advertise_service
+    raise BluetoothError (str (e))
+BluetoothError: (2, 'No such file or directory')
+[2019-10-16 13:17:51,374] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 13:17:51,377] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 13:17:51,382] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7feef68c1810>
+[2019-10-16 13:17:51,383] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-16 13:17:51,385] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-16 13:17:51,386] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-16 13:33:03,421] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-16 13:33:03,422] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-16 13:33:03,423] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-16 13:33:03,423] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-16 13:33:03,423] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-10-16 13:33:10,253] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 13:33:10,260] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 13:33:10,263] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7fab66ec9810>
+[2019-10-16 13:33:10,264] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-16 13:33:10,265] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-16 13:33:10,266] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-16 13:33:56,743] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-16 13:33:56,744] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-16 13:33:56,744] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-16 13:33:56,744] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-16 13:33:56,744] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-10-16 13:34:27,842] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('B8:27:EB:B6:74:28', 1)
+[2019-10-16 13:34:27,886] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [recvData] : Data received successfully over bluetooth connection
+[2019-10-16 13:34:27,887] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Serialized string converted successfully to object
+[2019-10-16 13:34:27,888] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7f8d428dd810>
+[2019-10-16 13:34:27,889] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-16 13:34:27,890] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-16 13:34:27,891] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Bluetooth sockets successfully closed ...
+[2019-10-16 13:44:56,134] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-16 13:44:56,134] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-16 13:44:56,134] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-16 13:44:56,135] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-16 13:44:56,135] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-10-16 13:45:02,697] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 13:45:02,698] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 13:45:02,699] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7f39d4100810>
+[2019-10-16 13:45:02,699] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-16 13:45:02,699] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-16 13:45:02,699] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-16 13:48:19,200] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-16 13:48:19,200] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-16 13:48:19,201] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-16 13:48:19,201] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-16 13:48:19,201] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-10-16 13:49:05,480] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 13:49:05,484] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 13:49:05,487] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7fdfd447c810>
+[2019-10-16 13:49:05,488] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-16 13:49:05,490] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-16 13:49:05,491] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-16 13:49:57,342] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-16 13:49:57,343] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-16 13:49:57,343] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-16 13:49:57,343] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-16 13:49:57,344] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-10-16 13:50:31,231] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 13:50:31,236] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 13:50:31,238] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7fbf2da2a810>
+[2019-10-16 13:50:31,239] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-16 13:50:31,240] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-16 13:50:31,241] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'

@@ -40,7 +40,7 @@ class bleServer:
             self.clientSocket = clientSocket
             self.serviceName="BluetoothServices"
             self.jsonFile ="text.json"
-            self.uuid = "94f39d29-7d6d-437d-973b-fba39e49d4ee"
+            self.uuid = "4b0164aa-1820-444e-83d4-3c702cfec373"
         else:
             self.serverSocket = serverSocket
             self.clientSocket = clientSocket
