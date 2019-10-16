@@ -807,3 +807,20 @@ Traceback (most recent call last):
   File "bleReceiver.py", line 135, in closeBluetoothSocket
     self.clientSocket.close()
 AttributeError: 'int' object has no attribute 'close'
+[2019-10-16 14:35:17,577] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 14:35:17,578] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 14:35:17,579] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'int' object has no attribute 'close'

@@ -1446,3 +1446,28 @@ AttributeError: 'int' object has no attribute 'close'
 [2019-10-16 14:32:58,973] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
 [2019-10-16 14:32:58,973] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
 [2019-10-16 14:32:58,974] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-10-16 14:35:17,577] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 14:35:17,578] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 14:35:17,579] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully opened to <open file 'text.json', mode 'w' at 0x7f999fa25810>
+[2019-10-16 14:35:17,579] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Content dumped successfully to the text.json file
+[2019-10-16 14:35:17,579] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : text.json file successfully closed
+[2019-10-16 14:35:17,579] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'int' object has no attribute 'close'
+[2019-10-16 14:35:19,238] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-10-16 14:35:19,238] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-10-16 14:35:19,238] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-10-16 14:35:19,238] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-10-16 14:35:19,239] : [INFO] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
