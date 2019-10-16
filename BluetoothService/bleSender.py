@@ -139,15 +139,16 @@ class bleClient:
         self.getBluetoothConnection()
 
     def send(self):
-        logger.info("Sending data over bluetooth connection")
         # Socket send
-        self.clientSocket.send("Hello Daniel")
-        # # Load the contents from the file, which creates a new json object
-        # self.readJsonFile()
-        # # Convert the json object to a serialized string
-        # serializedData = self.serializeData()
-        # # Sending data over bluetooth connection
-        # self.sendData(serializedData)
+        # logger.info("Sending data over bluetooth connection")
+    
+        # self.clientSocket.send("Hello Daniel")
+        # Load the contents from the file, which creates a new json object
+        self.readJsonFile()
+        # Convert the json object to a serialized string
+        serializedData = self.serializeData()
+        # Sending data over bluetooth connection
+        self.sendData(serializedData)
 
     def stop(self):
         # Disconnecting bluetooth service
