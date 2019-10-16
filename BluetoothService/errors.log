@@ -638,3 +638,172 @@ Traceback (most recent call last):
   File "bleReceiver.py", line 135, in closeBluetoothSocket
     self.clientSocket.close()
 AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-16 14:04:46,939] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 74, in advertiseBluetoothService
+    advertise_service( self.serverSocket, self.serviceName,
+AttributeError: bleServer instance has no attribute 'serviceName'
+[2019-10-16 14:06:08,378] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 14:06:08,383] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 14:06:08,385] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Failed to write json contents to the file ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 121, in writeJsonFile
+    jsonFileObj = open(self.jsonFile,"w")
+AttributeError: bleServer instance has no attribute 'jsonFile'
+[2019-10-16 14:06:08,388] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'int' object has no attribute 'close'
+[2019-10-16 14:06:09,471] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 74, in advertiseBluetoothService
+    advertise_service( self.serverSocket, self.serviceName,
+AttributeError: bleServer instance has no attribute 'serviceName'
+[2019-10-16 14:08:44,578] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 14:08:44,582] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 14:08:44,584] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Failed to write json contents to the file ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 121, in writeJsonFile
+    jsonFileObj = open(self.jsonFile,"w")
+AttributeError: bleServer instance has no attribute 'jsonFile'
+[2019-10-16 14:08:44,586] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'int' object has no attribute 'close'
+[2019-10-16 14:12:35,736] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 74, in advertiseBluetoothService
+    advertise_service( self.serverSocket, self.serviceName,
+AttributeError: bleServer instance has no attribute 'serviceName'
+[2019-10-16 14:19:58,558] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 14:19:58,561] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 14:19:58,563] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Failed to write json contents to the file ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 121, in writeJsonFile
+    jsonFileObj = open(self.jsonFile,"w")
+AttributeError: bleServer instance has no attribute 'jsonFile'
+[2019-10-16 14:19:58,565] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'int' object has no attribute 'close'
+[2019-10-16 14:20:34,704] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 74, in advertiseBluetoothService
+    advertise_service( self.serverSocket, self.serviceName,
+AttributeError: bleServer instance has no attribute 'serviceName'
+[2019-10-16 14:23:28,169] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 14:23:28,171] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 14:23:28,173] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Failed to write json contents to the file ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 121, in writeJsonFile
+    jsonFileObj = open(self.jsonFile,"w")
+AttributeError: bleServer instance has no attribute 'jsonFile'
+[2019-10-16 14:23:28,174] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'int' object has no attribute 'close'
+[2019-10-16 14:23:28,949] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [advertiseBluetoothService] : Failed to advertise bluetooth services  ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 74, in advertiseBluetoothService
+    advertise_service( self.serverSocket, self.serviceName,
+AttributeError: bleServer instance has no attribute 'serviceName'
+[2019-10-16 14:31:52,693] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 14:31:52,697] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 14:31:52,699] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [writeJsonFile] : Failed to write json contents to the file ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 121, in writeJsonFile
+    jsonFileObj = open(self.jsonFile,"w")
+AttributeError: bleServer instance has no attribute 'jsonFile'
+[2019-10-16 14:31:52,701] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'int' object has no attribute 'close'
+[2019-10-16 14:31:55,545] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 14:31:55,549] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 14:31:55,554] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-16 14:32:58,113] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 86, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-16 14:32:58,118] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 113, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-16 14:32:58,123] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 135, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'int' object has no attribute 'close'
