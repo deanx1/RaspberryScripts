@@ -89,6 +89,7 @@ class bleClient:
             self.clientSocket.connect((bleServiceInfo['host'], bleServiceInfo['port']))
             logger.info("Connected successfully to %s "% (bleServiceInfo['name']))
         except (Exception, BluetoothError, SystemExit, KeyboardInterrupt) as e:
+            bleServiceInfo = self.bleService[0]
             logger.error("Failed to connect to \"%s\" on address %s with port %s" % (bleServiceInfo['name'], bleServiceInfo['host'], bleServiceInfo['port']), exc_info=True)
 
     def readJsonFile(self):
