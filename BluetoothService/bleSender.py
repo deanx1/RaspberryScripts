@@ -56,7 +56,9 @@ class bleClient:
                 else:
                     break
             # if not bleService: raise SystemExit(), KeyboardInterrupt()
-            if not bleService: raise SystemExit(), None
+            if not bleService:
+                logger.info("Not bleService!")
+                raise SystemExit(), None
             else:
                 logger.info("JAJAJAJAJ")
                 logger.info("Found  Bluetooth services ..")
