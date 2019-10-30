@@ -35,6 +35,7 @@ def startLogging(
 class bleServer:
     def __init__(self, serverSocket=None, clientSocket=None):
         if serverSocket is None:
+            logger.info("serverSocket is None")
             self.dataObj = None
             # self.serverSocket = 12
             # self.clientSocket = 11
@@ -48,6 +49,7 @@ class bleServer:
             # self.clientSocket = 11
             self.serverSocket = serverSocket
             self.clientSocket = clientSocket
+            logger.info("serverSocket is not None")
 
     def getBluetoothSocket(self):
         try:
