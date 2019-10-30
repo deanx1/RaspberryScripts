@@ -829,3 +829,8 @@ Traceback (most recent call last):
   File "bleReceiver.py", line 117, in deserializedData
     self.dataObj=pickle.loads(_dataRecv)
 TypeError: loads() argument 1 must be string, not None
+[2019-10-29 18:33:12,767] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 59, in getBluetoothServices
+    if not bleService: raise SystemExit(), None
+SystemExit
