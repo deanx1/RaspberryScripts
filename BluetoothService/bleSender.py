@@ -4,6 +4,8 @@
 # Auth: P Srinivas Rao
 # Desc: Bluetooth client application that uses RFCOMM sockets
 #       intended for use with rfcomm-server
+
+#       Sending data from pi to laptop works this commit
 import os
 import sys
 import time
