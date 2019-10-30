@@ -51,8 +51,8 @@ class bleClient:
             logger.info("Searching for  Bluetooth services ...")
             for reConnect in range(1, 8):
                 bleService = find_service( uuid = self.uuid, address = self.addr )
-                # logger.info("ADRESS\t: %s", self.addr)
-                # logger.info("UUID\t: %s", self.uuid)
+                logger.info("ADRESS\t: %s", self.addr)
+                logger.info("UUID\t: %s", self.uuid)
                 if len(bleService) == 0:
                     logger.info("Re-connecting  Bluetooth services : %d attempt", reConnect)
                 else:
