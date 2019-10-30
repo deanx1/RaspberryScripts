@@ -54,6 +54,7 @@ class bleClient:
                 if len(bleService) == 0:
                     logger.info("Re-connecting  Bluetooth services : %d attempt", reConnect)
                 else:
+                    logger.info("BREAK BREAK BREAK")
                     break
             # if not bleService: raise SystemExit(), KeyboardInterrupt()
             if not bleService:
