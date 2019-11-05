@@ -834,3 +834,560 @@ Traceback (most recent call last):
   File "bleSender.py", line 59, in getBluetoothServices
     if not bleService: raise SystemExit(), None
 SystemExit
+[2019-10-30 11:16:46,932] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 11:16:46,936] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 11:16:46,947] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 11:19:40,738] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 11:19:40,741] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 11:19:40,745] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 11:20:32,938] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 11:20:32,940] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 11:20:32,947] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 11:22:08,521] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 11:22:08,525] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 11:22:08,532] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 11:24:03,180] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 11:24:03,186] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 11:24:03,206] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 11:30:07,978] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 90, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-30 11:30:07,983] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 117, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-30 11:30:07,987] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 139, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-30 11:31:59,079] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 90, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-30 11:31:59,082] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 117, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-30 11:31:59,086] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 139, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-30 12:01:34,370] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 90, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-30 12:01:34,374] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 117, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-30 12:01:34,381] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 139, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-30 12:01:50,656] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 53, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-30 12:01:50,663] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 12:01:50,672] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 13:20:37,305] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 53, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-30 13:20:37,313] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 13:20:37,317] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 13:22:22,081] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 13:22:22,099] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 13:22:22,105] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 13:23:52,318] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 53, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-30 13:23:52,325] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 13:23:52,332] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 13:26:09,535] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 13:26:09,541] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 13:26:09,548] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 13:49:43,744] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 13:49:43,746] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 13:49:43,750] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 13:59:04,887] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 53, in getBluetoothServices
+    bleService = find_service( name = "MyPi",uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-30 13:59:04,894] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 13:59:04,901] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 14:04:11,867] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 14:04:11,878] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 14:04:11,886] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 14:09:07,146] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 53, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-30 14:09:07,151] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 14:09:07,157] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 14:11:20,637] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 14:11:20,641] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 14:11:20,647] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 14:21:33,785] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 14:21:33,791] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 14:21:33,805] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 14:23:50,008] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 53, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-30 14:23:50,012] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 14:23:50,018] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 14:24:58,931] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 53, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-10-30 14:24:58,936] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 14:24:58,942] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 14:31:19,825] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 14:31:19,830] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 14:31:19,836] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 15:16:43,057] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 15:16:43,061] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 15:16:43,066] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 15:19:54,971] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 64, in getBluetoothServices
+    raise SystemExit(), None
+SystemExit
+[2019-10-30 15:19:54,979] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 15:19:54,985] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 17:57:43,273] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 92, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-30 17:57:43,277] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 119, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-30 17:57:43,282] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-30 18:13:43,771] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 92, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-30 18:13:43,773] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 119, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-30 18:13:43,774] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-30 18:15:54,768] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 92, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-30 18:15:54,771] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 119, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-30 18:15:54,775] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-30 18:17:34,782] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 92, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-30 18:17:34,786] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 119, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-30 18:17:34,790] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-30 18:19:27,348] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 92, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-10-30 18:19:27,352] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 119, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-10-30 18:19:27,355] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-10-30 18:19:44,063] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 53, in getBluetoothServices
+    bleService = find_service( name = "PI", uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-30 18:19:44,064] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 18:19:44,065] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 18:19:48,555] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 53, in getBluetoothServices
+    bleService = find_service( name = "PI", uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-30 18:19:48,555] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 18:19:48,556] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 18:19:57,189] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 53, in getBluetoothServices
+    bleService = find_service( name = "PI", uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-30 18:19:57,190] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 18:19:57,191] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 120, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 18:21:58,430] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 54, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 22, in discover_devices
+    raise BluetoothError ("error communicating with local "
+BluetoothError: error communicating with local bluetooth adapter
+[2019-10-30 18:21:58,431] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 18:21:58,432] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 121, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 18:25:08,831] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 54, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-30 18:25:08,833] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 18:25:08,836] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 121, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-10-30 18:26:45,445] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "bleSender.py", line 54, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 186, in find_service
+    devices = discover_devices ()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 19, in discover_devices
+    results = _bt.hci_inquiry (sock, duration=duration, flush_cache=True)
+KeyboardInterrupt
+[2019-10-30 18:26:45,450] : [ERROR] : [bleClientLogger] : [bleSender.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-10-30 18:26:45,453] : [ERROR] : [bleClientLogger] : [bleSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "bleSender.py", line 121, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-11-04 20:15:22,206] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 92, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-04 20:15:22,212] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 119, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-11-04 20:15:22,217] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-04 20:15:55,860] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 92, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-04 20:15:55,864] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 119, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-11-04 20:15:55,869] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-04 20:16:49,881] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 119, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-11-05 01:06:36,852] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 164, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 01:12:35,308] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 121, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')

@@ -33,68 +33,65 @@ def startLogging(
         logging.basicConfig(level=default_level)
 
 class bleClient:
-    def __init__(self, clientSocket=None):
-        if clientSocket is None:
+    def __init__(self, serverSocket=None, clientSocket=None):
+        if serverSocket is None:
+            logger.info("serverSocket is None")
             # self.clientSocket = 11
+            self.serverSocket = serverSocket
             self.clientSocket = clientSocket
             self.bleService = None
             self.addr = None
             self.uuid = "4b0164aa-1820-444e-83d4-3c702cfec373"
+            self.serviceName="BluetoothServices"
             self.jsonFile ="text.json"
             self.jsonObj = None
         else:
-            # self.clientSocket = 11
+            self.serverSocket = serverSocket
             self.clientSocket = clientSocket
-
-    def getBluetoothServices(self):
-        try:
-            logger.info("Searching for  Bluetooth services ...")
-            for reConnect in range(2, 8):
-                # bleService = find_service( name = "PI", uuid = self.uuid, address = self.addr )
-                bleService = find_service( uuid = self.uuid, address = self.addr )
-                logger.info("ADRESS\t: %s", self.addr)
-                logger.info("UUID\t: %s", self.uuid)
-                if len(bleService) == 0:
-                    logger.info("Re-connecting  Bluetooth services : %d attempt", reConnect)
-                else:
-                    logger.info("BREAK BREAK BREAK")
-                    break
-            # if not bleService: raise SystemExit(), KeyboardInterrupt()
-            if not bleService:
-                logger.info("Not bleService!")
-                raise SystemExit(), None
-            else:
-                logger.info("JAJAJAJAJ")
-                logger.info("Found  Bluetooth services ..")
-                logger.info("Protocol\t: %s", bleService[0]['protocol'])
-                logger.info("Name\t\t: %s", bleService[0]['name'])
-                logger.info("Service-id\t: %s", bleService[0]['service-id'])
-                logger.info("Profiles\t: %s", bleService[0]['profiles'])
-                logger.info("Service-class\t: %s", bleService[0]['service-classes'])
-                logger.info("Host\t\t: %s", bleService[0]['host'])
-                logger.info("Provider\t: %s", bleService[0]['provider'])
-                logger.info("Port\t\t: %s", bleService[0]['port'])
-                logger.info("Description\t: %s", bleService[0]['description'])
-                self.bleService = bleService
-        except (Exception, BluetoothError, SystemExit, KeyboardInterrupt) as e:
-            logger.error("Couldn't find the RaspberryPi Bluetooth service : Invalid uuid", exc_info=True)
+            logger.info("serverSocket is not None")
 
     def getBluetoothSocket(self):
         try:
-            self.clientSocket=BluetoothSocket( RFCOMM )
-            logger.info("Bluetooth client socket successfully created for RFCOMM service  ...")
-        except (Exception, BluetoothError, SystemExit, KeyboardInterrupt) as e:
-            logger.error("Failed to create the bluetooth client socket for RFCOMM service  ...  ", exc_info=True)
+            self.serverSocket=BluetoothSocket( RFCOMM )
+            logger.info("Bluetooth server socket successfully created for RFCOMM service...")
+        except (BluetoothError, SystemExit, KeyboardInterrupt) as e:
+            logger.error("Failed to create the bluetooth server socket ", exc_info=True)
 
     def getBluetoothConnection(self):
         try:
-            bleServiceInfo = self.bleService[0]
-            logger.info("Connecting to \"%s\" on %s with port %s" % (bleServiceInfo['name'], bleServiceInfo['host'], bleServiceInfo['port']))
-            self.clientSocket.connect((bleServiceInfo['host'], bleServiceInfo['port']))
-            logger.info("Connected successfully to %s "% (bleServiceInfo['name']))
+            self.serverSocket.bind(("",PORT_ANY))
+            logger.info("Bluetooth server socket bind successfully on host "" to PORT_ANY...")
         except (Exception, BluetoothError, SystemExit, KeyboardInterrupt) as e:
-            # logger.error("Failed to connect to \"%s\" on address %s with port %s" % (bleServiceInfo['name'], bleServiceInfo['host'], bleServiceInfo['port']), exc_info=True)
-            logger.error("Failed to connect to BLAH BLAH")
+            logger.error("Failed to bind server socket on host to PORT_ANY ... ", exc_info=True)
+        try:
+            self.serverSocket.listen(1)
+            logger.info("Bluetooth server socket put to listening mode successfully ...")
+        except (Exception, BluetoothError, SystemExit, KeyboardInterrupt) as e:
+            logger.error("Failed to put server socket to listening mode  ... ", exc_info=True)
+        try:
+            port=self.serverSocket.getsockname()[1]
+            logger.info("Waiting for connection on RFCOMM channel %d" % (port))
+        except (Exception, BluetoothError, SystemExit, KeyboardInterrupt) as e:
+            logger.error("Failed to get connection on RFCOMM channel  ... ", exc_info=True)
+
+    def advertiseBluetoothService(self):
+        try:
+            advertise_service( self.serverSocket, self.serviceName,
+                            service_id = self.uuid,
+                            service_classes = [ self.uuid, SERIAL_PORT_CLASS ],
+                            profiles = [ SERIAL_PORT_PROFILE ],
+        #                   protocols = [ OBEX_UUID ]
+                            )
+            logger.info("%s advertised successfully ..." % (self.serviceName))
+        except (Exception, BluetoothError, SystemExit, KeyboardInterrupt) as e:
+            logger.error("Failed to advertise bluetooth services  ... ", exc_info=True)
+
+    def acceptBluetoothConnection(self):
+        try:
+            self.clientSocket, clientInfo = self.serverSocket.accept()
+            logger.info("Accepted bluetooth connection from %s", clientInfo)
+        except (Exception, BluetoothError, SystemExit, KeyboardInterrupt) as e:
+            logger.error("Failed to accept bluetooth connection ... ", exc_info=True)
 
     def readJsonFile(self):
         try:
@@ -139,17 +136,27 @@ class bleClient:
         except (Exception, BluetoothError, SystemExit, KeyboardInterrupt) as e:
             logger.error("Failed to close the bluetooth client socket ", exc_info=True)
 
+    # def start(self):
+    #     # Search for the RaspberryPi Bluetooth service
+    #     self.getBluetoothServices()
+    #     # Create the client socket
+    #     self.getBluetoothSocket()
+    #     # Connect to bluetooth service
+    #     self.getBluetoothConnection()
+
     def start(self):
-        # Search for the RaspberryPi Bluetooth service
-        self.getBluetoothServices()
-        # Create the client socket
-        self.getBluetoothSocket()
-        # Connect to bluetooth service
-        self.getBluetoothConnection()
+            # Create the server socket
+            self.getBluetoothSocket()
+            # get bluetooth connection to port # of the first available
+            self.getBluetoothConnection()
+            # advertising bluetooth services
+            self.advertiseBluetoothService()
+            # Accepting bluetooth connection
+            self.acceptBluetoothConnection()
 
     def send(self):
         # Socket send
-        # logger.info("Sending data over bluetooth connection")
+        logger.info("Sending data over bluetooth connection")
     
         # self.clientSocket.send("Hello Daniel")
         # Load the contents from the file, which creates a new json object
