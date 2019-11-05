@@ -117,10 +117,15 @@ class bleClient:
             _serializedData =str(len(_serializedData))+ ":"+_serializedData
             self.clientSocket.send(_serializedData)
             time.sleep(0.5)
+            logger.info("Sending data over bluetooth connection 2")
             while True:
+                logger.info("Sending data over bluetooth connection 3")
                 dataRecv= self.clientSocket.recv(1024)
+                logger.info("Sending data over bluetooth connection 4")
                 if dataRecv in ['EmptyBufferResend', 'CorruptedBufferResend', 'DelimiterMissingBufferResend']:
+                    logger.info("Sending data over bluetooth connection 5")
                     self.clientSocket.send(_serializedData)
+                    logger.info("Sending data over bluetooth connection 6")
                     time.sleep(0.5)
                     logger.info("%s : Re-sending data over bluetooth connection" %(dataRecv))
                 else:
@@ -164,6 +169,7 @@ class bleClient:
         # Convert the json object to a serialized string
         serializedData = self.serializeData()
         # Sending data over bluetooth connection
+
         self.sendData(serializedData)
 
     def stop(self):
