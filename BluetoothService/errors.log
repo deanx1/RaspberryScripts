@@ -1535,3 +1535,707 @@ Traceback (most recent call last):
     dataRecv= self.clientSocket.recv(1024)
   File "<string>", line 5, in recv
 BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 11:15:20,069] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 11:15:20,074] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 11:15:20,075] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 140, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 11:38:50,861] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 11:38:50,865] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 11:38:50,866] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 140, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 11:40:40,960] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 11:40:40,964] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 11:40:40,965] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 140, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 11:45:51,932] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 11:46:03,510] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 11:47:40,150] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 11:48:15,476] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 11:50:52,967] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 11:51:05,725] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 11:56:01,908] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 11:58:35,390] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 11:58:35,397] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 11:58:35,399] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 140, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 11:59:38,670] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 11:59:38,676] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 11:59:38,677] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 140, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 12:09:19,481] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 12:09:19,486] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 12:09:19,488] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 140, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 12:09:43,287] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:11:51,168] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 12:11:51,177] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 12:11:51,178] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 140, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 12:13:11,961] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:16:33,986] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 12:16:33,993] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 12:16:33,995] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 140, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 12:16:42,644] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:21:35,860] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 12:21:35,868] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 12:21:35,870] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 140, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 12:24:37,642] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:25:53,679] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 12:25:53,683] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 12:25:53,684] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 12:31:49,566] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:33:09,331] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:34:41,518] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:37:05,283] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:40:09,412] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:43:49,750] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:46:14,910] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:46:52,317] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:47:09,522] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:48:27,268] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:49:32,230] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:51:03,635] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 12:59:08,215] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 13:01:34,028] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 13:01:34,037] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 13:01:34,038] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 13:01:46,488] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 13:03:54,245] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 13:03:54,250] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 13:03:54,252] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 13:16:15,583] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 13:16:55,354] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 13:17:46,429] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 13:17:46,437] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 13:17:46,438] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 13:17:54,304] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 13:28:33,236] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 13:28:33,244] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 13:28:33,246] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 13:28:39,524] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 13:33:33,923] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 13:39:06,935] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 13:42:36,584] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 13:43:52,205] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 13:44:32,162] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 13:49:51,300] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 13:53:00,060] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 13:53:00,069] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 118, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 13:53:00,071] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 13:54:11,144] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 13:59:38,404] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:01:43,679] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:03:46,560] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:05:11,729] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:10:12,961] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:10:55,250] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:13:16,644] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:15:12,843] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:16:48,129] : [ERROR] : [bleClientLogger] : [newSender.py] : [serializeData] : Failed to convert json object  to serialized string
+Traceback (most recent call last):
+  File "newSender.py", line 108, in serializeData
+    serializedData = pickle.dumps(self.jsonObj, "prot2")
+TypeError: an integer is required
+[2019-11-13 14:16:48,130] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 117, in sendData
+    _serializedData =str(len(_serializedData))+ ":"+_serializedData
+TypeError: object of type 'NoneType' has no len()
+[2019-11-13 14:19:20,074] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:20:51,963] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:21:56,334] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:23:21,477] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:27:11,668] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:28:23,880] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:28:55,991] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:30:05,111] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:32:14,780] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:33:49,534] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:38:04,766] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:43:55,234] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    logger.info("Sending data over bluetooth connection 3")
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:46:42,166] : [ERROR] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Failed to load content from the text.json
+Traceback (most recent call last):
+  File "newSender.py", line 100, in readJsonFile
+    self.jsonObj = json.load(jsonFileObj)
+  File "/usr/lib/python2.7/json/__init__.py", line 291, in load
+    **kw)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2019-11-13 14:46:42,723] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 124, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:47:21,920] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 14:47:21,926] : [ERROR] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Failed to load content from the text.json
+Traceback (most recent call last):
+  File "newSender.py", line 100, in readJsonFile
+    self.jsonObj = json.load(jsonFileObj)
+  File "/usr/lib/python2.7/json/__init__.py", line 291, in load
+    **kw)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2019-11-13 14:47:21,930] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 119, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 14:47:21,931] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 142, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 14:47:41,800] : [ERROR] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Failed to load content from the text.json
+Traceback (most recent call last):
+  File "newSender.py", line 100, in readJsonFile
+    self.jsonObj = json.load(jsonFileObj)
+  File "/usr/lib/python2.7/json/__init__.py", line 291, in load
+    **kw)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2019-11-13 14:47:42,306] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 124, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:51:30,672] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 91, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-11-13 14:51:30,678] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 119, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-11-13 14:51:30,679] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 142, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-11-13 14:51:48,414] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 124, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:52:11,937] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 124, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-13 14:54:18,710] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')

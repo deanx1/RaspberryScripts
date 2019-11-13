@@ -105,7 +105,7 @@ class bleClient:
 
     def serializeData(self):
         try:
-            serializedData = pickle.dumps(self.jsonObj)
+            serializedData = json.dumps(self.jsonObj)
             logger.info("Object successfully converted to a serialized string")
             return serializedData
         except (Exception, pickle.PicklingError) as e:
@@ -121,6 +121,7 @@ class bleClient:
             while True:
                 logger.info("Sending data over bluetooth connection 3")
                 dataRecv= self.clientSocket.recv(1024)
+                logger.info("Data: 4444")
                 logger.info("Data: " + dataRecv)
                 logger.info("Sending data over bluetooth connection 4")
                 if dataRecv in ['EmptyBufferResend', 'CorruptedBufferResend', 'DelimiterMissingBufferResend']:
