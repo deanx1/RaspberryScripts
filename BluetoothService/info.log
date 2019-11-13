@@ -2981,3 +2981,473 @@ Traceback (most recent call last):
   File "<string>", line 5, in recv
 BluetoothError: (104, 'Connection reset by peer')
 [2019-11-05 13:53:19,802] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-05 14:03:00,863] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-05 14:03:00,863] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-05 14:03:00,863] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-05 14:03:00,863] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-05 14:03:00,864] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-05 14:03:00,864] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-05 14:03:00,864] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-05 14:03:06,840] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-05 14:03:06,840] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-05 14:03:06,841] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7fbcf9f6e810>
+[2019-11-05 14:03:06,841] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-05 14:03:06,841] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-05 14:03:06,841] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-05 14:03:07,342] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-05 14:03:07,344] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-05 14:03:07,345] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:03:07,348] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-05 14:10:50,232] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-05 14:10:50,232] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-05 14:10:50,232] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-05 14:10:50,233] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-05 14:10:50,233] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-05 14:10:50,233] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-05 14:10:50,233] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-05 14:10:54,082] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-05 14:10:54,082] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-05 14:10:54,082] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f70de6de810>
+[2019-11-05 14:10:54,083] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-05 14:10:54,083] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-05 14:10:54,083] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-05 14:10:54,585] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-05 14:10:54,586] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-05 14:10:54,587] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:10:54,591] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-05 14:13:50,466] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-05 14:13:50,466] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-05 14:13:50,466] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-05 14:13:50,466] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-05 14:13:50,466] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-05 14:13:50,467] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-05 14:13:50,467] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-05 14:14:50,920] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-05 14:14:50,921] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-05 14:14:50,922] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7fcff1bb9810>
+[2019-11-05 14:14:50,922] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-05 14:14:50,922] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-05 14:14:50,923] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-05 14:14:51,424] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-05 14:14:51,425] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-05 14:15:59,161] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:15:59,161] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-05 14:16:11,856] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-05 14:16:11,856] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-05 14:16:11,856] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-05 14:16:11,857] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-05 14:16:11,857] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-05 14:16:11,857] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-05 14:16:11,857] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-05 14:16:21,864] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-05 14:16:21,866] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-05 14:16:21,866] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f9241882810>
+[2019-11-05 14:16:21,867] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-05 14:16:21,868] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-05 14:16:21,868] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-05 14:16:22,370] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-05 14:16:22,371] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-05 14:22:35,317] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:22:35,318] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-05 14:22:47,577] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-05 14:22:47,577] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-05 14:22:47,578] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-05 14:22:47,578] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-05 14:22:47,579] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-05 14:22:47,579] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-05 14:22:47,580] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-05 14:22:54,846] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-05 14:22:54,848] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-05 14:22:54,849] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f6d0e53a810>
+[2019-11-05 14:22:54,850] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-05 14:22:54,851] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-05 14:22:54,852] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-05 14:22:55,353] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-05 14:22:55,354] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-05 14:22:55,355] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:22:55,358] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-05 14:39:32,295] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-05 14:39:32,296] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-05 14:39:32,296] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-05 14:39:32,296] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-05 14:39:32,296] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-05 14:39:32,296] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-05 14:39:32,297] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-05 14:39:40,979] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-05 14:39:40,980] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-05 14:39:40,981] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f73b745a810>
+[2019-11-05 14:39:40,982] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-05 14:39:40,983] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-05 14:39:40,984] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-05 14:39:41,486] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-05 14:39:41,487] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-05 14:39:41,487] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:39:41,489] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-05 14:57:02,687] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-05 14:57:02,687] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-05 14:57:02,687] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-05 14:57:02,687] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-05 14:57:02,687] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-05 14:57:02,688] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-05 14:57:02,688] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-05 14:58:48,964] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-05 14:58:48,966] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-05 14:58:48,967] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f3acb790810>
+[2019-11-05 14:58:48,968] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-05 14:58:48,969] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-05 14:58:48,970] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-05 14:58:49,471] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-05 14:58:49,471] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-05 14:58:49,472] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:58:49,472] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-05 15:01:47,425] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-05 15:01:47,425] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-05 15:01:47,425] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-05 15:01:47,425] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-05 15:01:47,425] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-05 15:01:47,425] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-05 15:01:47,426] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-05 15:02:02,585] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-05 15:02:02,587] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-05 15:02:02,588] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7ff023f34810>
+[2019-11-05 15:02:02,589] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-05 15:02:02,591] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-05 15:02:02,592] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-05 15:02:03,095] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-05 15:02:03,096] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-05 15:02:03,097] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 15:02:03,100] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-05 15:04:34,955] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-05 15:04:34,955] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-05 15:04:34,955] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-05 15:04:34,955] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-05 15:04:34,956] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-05 15:04:34,956] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-05 15:04:34,956] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-05 15:04:45,796] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-05 15:04:45,797] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-05 15:04:45,798] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f6d6198b810>
+[2019-11-05 15:04:45,799] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-05 15:04:45,800] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-05 15:04:45,801] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-05 15:04:46,304] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-05 15:04:46,304] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-05 15:04:46,304] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 15:04:46,305] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-05 15:05:04,768] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-05 15:05:04,769] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-05 15:05:04,769] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-05 15:05:04,769] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-05 15:05:04,769] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-05 15:05:04,769] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-05 15:05:04,770] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-05 15:05:11,423] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-05 15:05:11,424] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-05 15:05:11,425] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f2e0f5a1810>
+[2019-11-05 15:05:11,426] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-05 15:05:11,427] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-05 15:05:11,428] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-05 15:05:11,930] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-05 15:05:11,931] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-05 15:05:11,933] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 15:05:11,937] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-12 13:01:39,385] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-12 13:01:39,387] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-12 13:01:39,387] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-12 13:01:39,388] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-12 13:01:39,389] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-12 13:01:39,389] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-12 13:01:39,390] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-12 13:01:49,072] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-12 13:01:49,073] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-12 13:01:49,073] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f83684b1810>
+[2019-11-12 13:01:49,074] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-12 13:01:49,075] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-12 13:01:49,076] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-12 13:01:49,577] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-12 13:01:49,577] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-12 13:10:35,505] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 13:10:35,509] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-12 13:11:02,358] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-12 13:11:02,358] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-12 13:11:02,359] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-12 13:11:02,359] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-12 13:11:02,360] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-12 13:11:02,360] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-12 13:11:02,361] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-12 13:11:15,960] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-12 13:11:15,961] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-12 13:11:15,962] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7fc3cfd76810>
+[2019-11-12 13:11:15,962] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-12 13:11:15,963] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-12 13:11:15,963] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-12 13:11:16,464] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-12 13:11:16,465] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-12 13:12:26,247] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-12 13:12:26,248] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-12 13:12:26,249] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-12 13:12:26,249] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-12 13:12:26,250] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-12 13:12:26,250] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-12 13:12:26,251] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-12 13:12:39,787] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-12 13:12:39,788] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-12 13:12:39,789] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7fbb1f73d810>
+[2019-11-12 13:12:39,789] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-12 13:12:39,790] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-12 13:12:39,790] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-12 13:12:40,291] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-12 13:12:40,292] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-12 13:51:36,612] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 13:51:36,614] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-12 14:19:03,575] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-12 14:19:03,576] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-12 14:19:03,576] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-12 14:19:03,576] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-12 14:19:03,576] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-12 14:19:03,577] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-12 14:19:03,578] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-12 14:20:17,850] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-12 14:20:17,850] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-12 14:20:17,850] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f229e67c810>
+[2019-11-12 14:20:17,851] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-12 14:20:17,851] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-12 14:20:17,851] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-12 14:20:18,352] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-12 14:20:18,352] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-12 14:21:00,883] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 14:21:00,887] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-12 14:21:15,358] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-12 14:21:15,358] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-12 14:21:15,358] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-12 14:21:15,358] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-12 14:21:15,359] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-12 14:21:15,359] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-12 14:21:15,359] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-12 14:21:41,082] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-12 14:21:41,082] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-12 14:21:41,083] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7fb2aa88a810>
+[2019-11-12 14:21:41,083] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-12 14:21:41,083] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-12 14:21:41,083] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-12 14:21:41,584] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-12 14:21:41,586] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-12 14:23:52,741] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 14:23:52,741] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-12 14:23:56,309] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-12 14:23:56,309] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-12 14:23:56,309] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-12 14:23:56,309] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-12 14:23:56,309] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-12 14:23:56,310] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-12 14:23:56,310] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-12 14:24:12,159] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-12 14:24:12,159] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-12 14:24:12,160] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f4dcd5ad810>
+[2019-11-12 14:24:12,160] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-12 14:24:12,160] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-12 14:24:12,161] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-12 14:24:12,661] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-12 14:24:12,663] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-12 14:29:27,827] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 14:29:27,827] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-12 14:34:34,585] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-12 14:34:34,586] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-12 14:34:34,586] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-12 14:34:34,587] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-12 14:34:34,587] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-12 14:34:34,587] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-12 14:34:34,588] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-12 14:36:06,459] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-12 14:36:06,459] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-12 14:36:06,460] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7fd83fc1e810>
+[2019-11-12 14:36:06,461] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-12 14:36:06,461] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-12 14:36:06,461] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-12 14:36:06,962] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-12 14:36:06,962] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-12 14:42:05,099] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 14:42:05,104] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-12 14:42:33,362] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-12 14:42:33,363] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-12 14:42:33,363] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-12 14:42:33,363] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-12 14:42:33,364] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-12 14:42:33,364] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-12 14:42:33,366] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-12 14:42:36,866] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-12 14:42:36,867] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-12 14:42:36,868] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7f4b9cac5810>
+[2019-11-12 14:42:36,868] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-12 14:42:36,868] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-12 14:42:36,869] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-12 14:42:37,369] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-12 14:42:37,371] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-12 14:42:37,372] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 14:42:37,374] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-12 14:49:21,349] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-12 14:49:21,350] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-12 14:49:21,351] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-12 14:49:21,351] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-12 14:49:21,352] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-12 14:49:21,352] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-12 14:49:21,353] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-12 14:49:35,465] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-12 14:49:35,466] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-12 14:49:35,466] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7ff95a4ac810>
+[2019-11-12 14:49:35,467] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-12 14:49:35,468] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-12 14:49:35,468] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-12 14:49:35,969] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-12 14:49:35,971] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-12 15:13:31,514] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-12 15:13:31,514] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-12 15:13:31,515] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-12 15:13:31,515] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-12 15:13:31,515] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-12 15:13:31,515] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-12 15:13:31,516] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-12 15:13:57,256] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-12 15:13:57,257] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-12 15:13:57,258] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7facd801c810>
+[2019-11-12 15:13:57,259] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-12 15:13:57,259] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-12 15:13:57,260] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-12 15:13:57,762] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-12 15:13:57,763] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-12 15:22:19,137] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 15:22:19,139] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-12 15:22:33,517] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-12 15:22:33,518] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-12 15:22:33,518] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-12 15:22:33,518] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-12 15:22:33,518] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-12 15:22:33,519] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-12 15:22:33,519] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-12 15:22:53,047] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-12 15:22:53,048] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-12 15:22:53,049] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7fdd804c1810>
+[2019-11-12 15:22:53,050] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-12 15:22:53,051] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-12 15:22:53,052] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-12 15:22:53,553] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-12 15:22:53,554] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-12 15:22:53,555] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 15:22:53,558] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...
+[2019-11-12 15:27:15,281] : [INFO] : [bleClientLogger] : [newSender.py] : [<module>] : Setup logging configuration
+[2019-11-12 15:27:15,281] : [INFO] : [bleClientLogger] : [newSender.py] : [__init__] : serverSocket is None
+[2019-11-12 15:27:15,281] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothSocket] : Bluetooth server socket successfully created for RFCOMM service...
+[2019-11-12 15:27:15,281] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket bind successfully on host  to PORT_ANY...
+[2019-11-12 15:27:15,282] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Bluetooth server socket put to listening mode successfully ...
+[2019-11-12 15:27:15,282] : [INFO] : [bleClientLogger] : [newSender.py] : [getBluetoothConnection] : Waiting for connection on RFCOMM channel 1
+[2019-11-12 15:27:15,282] : [INFO] : [bleClientLogger] : [newSender.py] : [advertiseBluetoothService] : BluetoothServices advertised successfully ...
+[2019-11-12 15:27:44,226] : [INFO] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Accepted bluetooth connection from ('CC:21:19:93:F6:EA', 1)
+[2019-11-12 15:27:44,226] : [INFO] : [bleClientLogger] : [newSender.py] : [send] : Sending data over bluetooth connection
+[2019-11-12 15:27:44,226] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : File successfully uploaded to <open file 'text.json', mode 'r' at 0x7fb83a010810>
+[2019-11-12 15:27:44,227] : [INFO] : [bleClientLogger] : [newSender.py] : [readJsonFile] : Content loaded successfully from the text.json file
+[2019-11-12 15:27:44,227] : [INFO] : [bleClientLogger] : [newSender.py] : [serializeData] : Object successfully converted to a serialized string
+[2019-11-12 15:27:44,227] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection
+[2019-11-12 15:27:44,728] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 2
+[2019-11-12 15:27:44,729] : [INFO] : [bleClientLogger] : [newSender.py] : [sendData] : Sending data over bluetooth connection 3
+[2019-11-12 15:27:44,730] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 15:27:44,733] : [INFO] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Bluetooth client socket successfully closed ...

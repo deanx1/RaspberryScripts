@@ -121,6 +121,7 @@ class bleClient:
             while True:
                 logger.info("Sending data over bluetooth connection 3")
                 dataRecv= self.clientSocket.recv(1024)
+                logger.info("Data: " + dataRecv)
                 logger.info("Sending data over bluetooth connection 4")
                 if dataRecv in ['EmptyBufferResend', 'CorruptedBufferResend', 'DelimiterMissingBufferResend']:
                     logger.info("Sending data over bluetooth connection 5")

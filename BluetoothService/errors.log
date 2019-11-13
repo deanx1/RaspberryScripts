@@ -1415,3 +1415,123 @@ Traceback (most recent call last):
     dataRecv= self.clientSocket.recv(1024)
   File "<string>", line 5, in recv
 BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:03:07,345] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:10:54,587] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:15:59,161] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:22:35,317] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:22:55,355] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:39:41,487] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 14:58:49,472] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 15:02:03,097] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 15:04:46,304] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-05 15:05:11,933] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 13:10:35,505] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 13:51:36,612] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 14:21:00,883] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 14:23:52,741] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 14:29:27,827] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 14:42:05,099] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 14:42:37,372] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 15:22:19,137] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 15:22:53,555] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
+[2019-11-12 15:27:44,730] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 123, in sendData
+    dataRecv= self.clientSocket.recv(1024)
+  File "<string>", line 5, in recv
+BluetoothError: (104, 'Connection reset by peer')
