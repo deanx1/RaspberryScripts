@@ -1,1 +1,5 @@
-* * * * * /usr/bin/python2 /home/pi/Datamule/sensorScript.py
+* * * * * /usr/bin/python2 /home/pi/Datamule/RaspberryScripts/sensorScript.py
+
+
+OLD ONE:
+* * * * * /usr/bin/python2 /home/pi/Datamule/test2.py

@@ -11,6 +11,7 @@ import logging
 import logging.config
 import json #Uses JSON package
 import cPickle as pickle #Serializing and de-serializing a Python object structure
+from datetime import datetime
 from bluetooth import * #Python Bluetooth library
 
 logger = logging.getLogger('bleClientLogger')
@@ -43,7 +44,7 @@ class bleClient:
             self.addr = None
             self.uuid = "4b0164aa-1820-444e-83d4-3c702cfec373"
             self.serviceName="BluetoothServices"
-            self.jsonFile ="text.json"
+            self.jsonFile ="data.json"
             self.jsonObj = None
         else:
             self.serverSocket = serverSocket
@@ -105,7 +106,7 @@ class bleClient:
 
     def serializeData(self):
         try:
-            serializedData = pickle.dumps(self.jsonObj)
+            serializedData = json.dumps(self.jsonObj)
             logger.info("Object successfully converted to a serialized string")
             return serializedData
         except (Exception, pickle.PicklingError) as e:
@@ -114,13 +115,17 @@ class bleClient:
     def sendData(self, _serializedData):
         try:
             logger.info("Sending data over bluetooth connection")
-            _serializedData =str(len(_serializedData))+ ":"+_serializedData
+            now = datetime.now()
+            dt_string = now.strftime("%Y/%m/%d %H:%M ")
+            # _serializedData = str(len(_serializedData))+ ":"+_serializedData
+            _serializedData = dt_string +_serializedData
             self.clientSocket.send(_serializedData)
             time.sleep(0.5)
             logger.info("Sending data over bluetooth connection 2")
             while True:
                 logger.info("Sending data over bluetooth connection 3")
                 dataRecv= self.clientSocket.recv(1024)
+                logger.info("Data: 4444")
                 logger.info("Data: " + dataRecv)
                 logger.info("Sending data over bluetooth connection 4")
                 if dataRecv in ['EmptyBufferResend', 'CorruptedBufferResend', 'DelimiterMissingBufferResend']:
@@ -170,8 +175,8 @@ class bleClient:
         # Convert the json object to a serialized string
         serializedData = self.serializeData()
         # Sending data over bluetooth connection
-
         self.sendData(serializedData)
+
 
     def stop(self):
         # Disconnecting bluetooth service
