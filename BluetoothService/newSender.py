@@ -11,6 +11,7 @@ import logging
 import logging.config
 import json #Uses JSON package
 import cPickle as pickle #Serializing and de-serializing a Python object structure
+from datetime import datetime
 from bluetooth import * #Python Bluetooth library
 
 logger = logging.getLogger('bleClientLogger')
@@ -114,7 +115,10 @@ class bleClient:
     def sendData(self, _serializedData):
         try:
             logger.info("Sending data over bluetooth connection")
-            _serializedData =str(len(_serializedData))+ ":"+_serializedData
+            now = datetime.now()
+            dt_string = now.strftime("%Y/%m/%d %H:%M ")
+            # _serializedData = str(len(_serializedData))+ ":"+_serializedData
+            _serializedData = dt_string +_serializedData
             self.clientSocket.send(_serializedData)
             time.sleep(0.5)
             logger.info("Sending data over bluetooth connection 2")
@@ -171,8 +175,8 @@ class bleClient:
         # Convert the json object to a serialized string
         serializedData = self.serializeData()
         # Sending data over bluetooth connection
-
         self.sendData(serializedData)
+
 
     def stop(self):
         # Disconnecting bluetooth service
