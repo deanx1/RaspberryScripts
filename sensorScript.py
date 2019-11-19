@@ -24,7 +24,7 @@ if humidity is not None and temperature is not None:
   'datetime': str(datetime.now())
 })
 
-  with open('/home/pi/Datamule/data.json', 'a+') as outfile:
+  with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'a+') as outfile:
     json.dump(data, outfile)
   
 else:
