@@ -180,11 +180,21 @@ class bleClient:
         serializedData = self.serializeData()
         # Sending data over bluetooth connection
         self.sendData(serializedData)
+        logger.info("send method done")
 
 
     def stop(self):
         # Disconnecting bluetooth service
         self.closeBluetoothSocket()
+    
+    def keepRunning(self):
+        # Disconnecting bluetooth service
+        while True:
+            logger.info("Keep running in loop")
+            bleClnt.start()
+            bleClnt.send()
+
+        
 
 if __name__ == '__main__':
     startLogging()
@@ -193,3 +203,4 @@ if __name__ == '__main__':
     bleClnt.start()
     bleClnt.send()
     bleClnt.stop()
+    bleClnt.keepRunning()
