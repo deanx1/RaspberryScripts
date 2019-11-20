@@ -125,11 +125,13 @@ class bleClient:
             logger.info("Sending data over bluetooth connection 2")
             while True:
                 logger.info("Sending data over bluetooth connection 3")
+                dataRecv = None
                 try:
                     dataRecv= self.clientSocket.recv(1024)
                 except:
                     logger.info("Android closed connection")
                 logger.info("Sending data over bluetooth connection 4")
+
                 if dataRecv in ['EmptyBufferResend', 'CorruptedBufferResend', 'DelimiterMissingBufferResend']:
                     logger.info("Sending data over bluetooth connection 5")
                     self.clientSocket.send(_serializedData)
