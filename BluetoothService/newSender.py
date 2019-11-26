@@ -37,8 +37,8 @@ class bleClient:
     def __init__(self, serverSocket=None, clientSocket=None):
 
         self.currentDirectory = os.getcwd()
-        # logger.info("currentDirectory")
-        # logger.info(self.currentDirectory + "/" + "data-test.json")
+        logger.info("currentDirectory")
+        logger.info(self.currentDirectory + "/" + "data-test.json")
         if serverSocket is None:
             logger.info("serverSocket is None1")
             # self.clientSocket = 11
