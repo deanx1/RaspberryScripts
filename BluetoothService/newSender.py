@@ -36,7 +36,8 @@ def startLogging(
 class bleClient:
     def __init__(self, serverSocket=None, clientSocket=None):
 
-        self.currentDirectory = os.getcwd()
+        # self.currentDirectory = os.getcwd()
+        self.currentDirectory = (os.path.dirname(os.path.realpath(__file__)))
         logger.info("currentDirectory")
         logger.info(self.currentDirectory + "/" + "data-test.json")
         if serverSocket is None:
