@@ -13,6 +13,7 @@ import json #Uses JSON package
 import cPickle as pickle #Serializing and de-serializing a Python object structure
 from datetime import datetime
 from bluetooth import * #Python Bluetooth library
+import subprocess
 
 logger = logging.getLogger('bleClientLogger')
 
@@ -33,6 +34,10 @@ def startLogging(
     else:
         logging.basicConfig(level=default_level)
 
+def setDiscoverable():
+        cmd = 'sudo hciconfig hci0 piscan'
+        subprocess.check_output(cmd, shell = True )
+
 class bleClient:
     def __init__(self, serverSocket=None, clientSocket=None):
 
@@ -50,7 +55,7 @@ class bleClient:
             self.uuid = "4b0164aa-1820-444e-83d4-3c702cfec373"
             self.serviceName="BluetoothServices"
             # self.jsonFile ="data.json"
-            self.jsonFile =self.currentDirectory + "/" + "data-test.json"
+            self.jsonFile =self.currentDirectory + "/" + "data.json"
             # self.jsonFile =self.currentDirectory + "/" + "data.json"
             # self.jsonFile ="data-test.json"
             self.jsonObj = None
@@ -201,9 +206,12 @@ class bleClient:
             bleClnt.start()
             bleClnt.send()
 
+    
+
         
 
 if __name__ == '__main__':
+    setDiscoverable()
     startLogging()
     logger.info("Setup logging configuration")
     bleClnt = bleClient()
