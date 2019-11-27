@@ -205,10 +205,7 @@ class bleClient:
             logger.info("Keep running in loop")
             bleClnt.start()
             bleClnt.send()
-
-    
-
-        
+            
 
 if __name__ == '__main__':
     setDiscoverable()
