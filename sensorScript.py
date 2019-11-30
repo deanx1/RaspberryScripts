@@ -29,4 +29,4 @@ if humidity is not None and temperature is not None:
   
 else:
 
-  print 'Geen data ontvangen'
+  print 'No data received'
