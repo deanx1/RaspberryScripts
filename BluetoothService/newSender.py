@@ -14,6 +14,31 @@ import cPickle as pickle #Serializing and de-serializing a Python object structu
 from datetime import datetime
 from bluetooth import * #Python Bluetooth library
 import subprocess
+from threading import Thread
+
+class EverySoOften(Thread):
+    def __init__(self, seconds):
+        '''Note that when you override __init__, you must 
+           use super() to call __init__() in the base class
+           so you'll get all the "chocolately-goodness" of
+           threading (i.e., the magic that sets up the thread
+           within the OS) or it won't work.
+        '''        
+        super(EverySoOften, self).__init__() 
+        self.delay = seconds
+        self.is_done = False
+ 
+    def done(self):
+        self.is_done = True
+ 
+    def run(self):
+        while not self.is_done:
+            time.sleep(self.delay)
+            setDiscoverable()
+        print('thread done')
+
+t = EverySoOften(180)
+t.start()
 
 logger = logging.getLogger('bleClientLogger')
 
@@ -36,15 +61,9 @@ def startLogging(
 
 # To make the pi always discoverable
 def setDiscoverable():
-    while True:
-        try:
-            logger.info("Setting discoverable to on")
-            cmd = 'sudo hciconfig hci0 piscan'
-            subprocess.check_output(cmd, shell = True )
-            time.sleep(180)
-        except:
-            logger.info("Something went wrong in setting discoverable")
-            
+    logger.info("Setting discoverable to on")
+    cmd = 'sudo hciconfig hci0 piscan'
+    subprocess.check_output(cmd, shell = True )        
 
 class bleClient:
     def __init__(self, serverSocket=None, clientSocket=None):
