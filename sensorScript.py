@@ -7,22 +7,20 @@ import json
 data = {}
 data['sensor'] = [] 
 
-# humidity, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT11, 4)
-temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT11, 4)
+humidity, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT11, 4)
 
-# humidity = round(humidity, 2)
-print (temperature)
+humidity = round(humidity, 2)
 temperature = round(temperature, 2)
 
 if humidity is not None and temperature is not None:
 
   print 'Temperatuur: {0:0.1f}*C'.format(temperature)
-  # print 'Luchtvochtigheid: {0:0.1f}%'.format(humidity)
+  print 'Luchtvochtigheid: {0:0.1f}%'.format(humidity)
   print datetime.now()
   
   data['sensor'].append({
   'temperature': temperature,
-  # 'humidity': humidity,
+  'humidity': humidity,
   'datetime': str(datetime.now())
 })
 
