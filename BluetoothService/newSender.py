@@ -37,7 +37,7 @@ class EverySoOften(Thread):
             setDiscoverable()
         print('thread done')
 
-t = EverySoOften(10)
+t = EverySoOften(60)
 t.start()
 
 logger = logging.getLogger('bleClientLogger')
@@ -61,7 +61,7 @@ def startLogging(
 
 # To make the pi always discoverable
 def setDiscoverable():
-    logger.info("Setting discoverable to on")
+    # logger.info("Setting discoverable to on")
     cmd = 'sudo hciconfig hci0 piscan'
     subprocess.check_output(cmd, shell = True )        
 
