@@ -37,7 +37,7 @@ class EverySoOften(Thread):
             setDiscoverable()
         print('thread done')
 
-t = EverySoOften(180)
+t = EverySoOften(10)
 t.start()
 
 logger = logging.getLogger('bleClientLogger')
