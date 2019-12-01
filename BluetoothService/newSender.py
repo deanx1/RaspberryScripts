@@ -36,8 +36,8 @@ def startLogging(
 
 # To make the pi always discoverable
 def setDiscoverable():
-    while True
-        try
+    while True:
+        try:
             logger.info("Setting discoverable to on")
             cmd = 'sudo hciconfig hci0 piscan'
             subprocess.check_output(cmd, shell = True )
