@@ -34,9 +34,17 @@ def startLogging(
     else:
         logging.basicConfig(level=default_level)
 
+# To make the pi always discoverable
 def setDiscoverable():
-        cmd = 'sudo hciconfig hci0 piscan'
-        subprocess.check_output(cmd, shell = True )
+    while True
+        try
+            logger.info("Setting discoverable to on")
+            cmd = 'sudo hciconfig hci0 piscan'
+            subprocess.check_output(cmd, shell = True )
+            time.sleep(180)
+        except expression as identifier:
+            logger.info("Something went wrong in setting discoverable")
+            
 
 class bleClient:
     def __init__(self, serverSocket=None, clientSocket=None):
