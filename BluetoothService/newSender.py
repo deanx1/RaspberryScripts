@@ -42,7 +42,7 @@ def setDiscoverable():
             cmd = 'sudo hciconfig hci0 piscan'
             subprocess.check_output(cmd, shell = True )
             time.sleep(180)
-        except expression as identifier:
+        except:
             logger.info("Something went wrong in setting discoverable")
             
 
