@@ -1,5 +1,9 @@
+#!/usr/bin/python2
+
 import glob
 import time
+
+# This script is for the sensor DS18B20
 
 base_dir = '/sys/bus/w1/devices/'
 device_folder = glob.glob(base_dir + '28*')[0]
@@ -26,4 +30,3 @@ def read_temp():
 while True:
     print(read_temp())
     time.sleep(1)
-    

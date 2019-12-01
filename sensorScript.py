@@ -1,5 +1,7 @@
 #!/usr/bin/python2
 
+# This script is for the sensor DHT11
+
 import Adafruit_DHT
 from datetime import datetime
 import json
