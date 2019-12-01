@@ -1,5 +1,5 @@
-* * * * * /usr/bin/python2 /home/pi/Datamule/RaspberryScripts/sensorScript.py
+For DHT11 put the next line in the "sudo crontab -e" , the script below is scheduled to collect and store data every 30 minutes.
+*/30 * * * * /usr/bin/python2 /home/pi/Datamule/RaspberryScripts/DHT11SensorScript.py
 
-
-OLD ONE:
-* * * * * /usr/bin/python2 /home/pi/Datamule/test2.py
+For DS18B20 put the next line in the "sudo crontab -e", the script below is scheduled to collect and store data every 30 minutes.
+*/30 * * * * /usr/bin/python2 /home/pi/Datamule/RaspberryScripts/DS18SensorScript.py
