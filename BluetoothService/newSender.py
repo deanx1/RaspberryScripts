@@ -160,12 +160,16 @@ class bleClient:
             # _serializedData = str(len(_serializedData))+ ":"+_serializedData
             _serializedData = dt_string +_serializedData
             self.clientSocket.send(_serializedData)
+            logger.info("data 3")
+            logger.info(_serializedData)
             time.sleep(0.5)
             logger.info("Sending data over bluetooth connection 2")
             while True:
                 logger.info("Sending data over bluetooth connection 3")
                 dataRecv = None
                 try:
+                    logger.info("data 3")
+                    logger.info(_serializedData)
                     dataRecv= self.clientSocket.recv(1024)
                 except:
                     logger.info("Android closed connection")
