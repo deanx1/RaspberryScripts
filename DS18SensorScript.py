@@ -46,7 +46,8 @@ if temperature is not None:
 })
 
   with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'a+') as outfile:
-    j = json.loads(outfile)
+    print outfile
+    j = json.loads(outfile.read())
     outfile.truncate(0)
     j["sensor"].append({
     'temperature': temperature,
