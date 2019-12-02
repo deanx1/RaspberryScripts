@@ -71,7 +71,7 @@ class bleClient:
         # self.currentDirectory = os.getcwd()
         self.currentDirectory = (os.path.dirname(os.path.realpath(__file__)))
         logger.info("currentDirectory")
-        logger.info(self.currentDirectory + "/" + "data-test.json")
+        logger.info(self.currentDirectory + "/" + "data.json")
         if serverSocket is None:
             logger.info("serverSocket is None1")
             # self.clientSocket = 11
