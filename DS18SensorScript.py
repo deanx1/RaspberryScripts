@@ -60,7 +60,7 @@ if temperature is not None:
     print datetime.now()
 
 
-    with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'w+') as outfile:
+    with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'a+') as outfile:
       
         print "SDFSDFSDFSDF " + outfile.read()
         print "SDFSDFSvsdvdsvsdvsdvDFSDF " + str(len(outfile.read()))
@@ -87,9 +87,6 @@ if temperature is not None:
           })
           json.dump(j, outfile)
 
-        
-
-        
         print outfile
 
 else:
