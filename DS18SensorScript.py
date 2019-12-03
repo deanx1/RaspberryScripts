@@ -6,19 +6,22 @@ import glob
 import time
 from datetime import datetime
 import json
+import os
 
 data = {}
-data['sensor'] = [] 
+data['sensor'] = []
 
 base_dir = '/sys/bus/w1/devices/'
 device_folder = glob.glob(base_dir + '28*')[0]
 device_file = device_folder + '/w1_slave'
+
 
 def read_temp_raw():
     f = open(device_file, 'r')
     lines = f.readlines()
     f.close()
     return lines
+
 
 def read_temp():
     lines = read_temp_raw()
@@ -32,30 +35,40 @@ def read_temp():
         temp_f = temp_c * 9.0 / 5.0 + 32.0
         return temp_c
 
+
+def checkIfFileExists():
+    currentDirectory = (os.path.dirname(os.path.realpath(__file__)))
+    exists = os.path.is.file(currentDirectory + "/" + "BluetoothService/data.json")
+    print('checkIfFileExists:')
+    print exists
+    # return exists
+
+
 temperature = read_temp()
 temperature = round(temperature, 2)
+checkIfFileExists()
 
 if temperature is not None:
 
-  print 'Temperatuur: {0:0.1f}*C'.format(temperature)
-  print datetime.now()
-  
-  data['sensor'].append({
-  'temperature': temperature,
-  'datetime': str(datetime.now())
-})
+    print 'Temperatuur: {0:0.1f}*C'.format(temperature)
+    print datetime.now()
 
-  with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'a+') as outfile:
-    print outfile
-    j = json.loads(outfile.read())
-    outfile.truncate(0)
-    j["sensor"].append({
-    'temperature': temperature,
-    'datetime': str(datetime.now())
+    data['sensor'].append({
+        'temperature': temperature,
+        'datetime': str(datetime.now())
     })
-    json.dump(j, outfile)
-    print outfile
-  
+
+    with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'a+') as outfile:
+        print outfile
+        j = json.loads(outfile.read())
+        outfile.truncate(0)
+        j["sensor"].append({
+            'temperature': temperature,
+            'datetime': str(datetime.now())
+        })
+        json.dump(j, outfile)
+        print outfile
+
 else:
 
-  print 'No data received'
+    print 'No data received'

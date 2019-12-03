@@ -82,8 +82,8 @@ class bleClient:
             self.uuid = "4b0164aa-1820-444e-83d4-3c702cfec373"
             self.serviceName="BluetoothServices"
             # self.jsonFile ="data.json"
-            self.jsonFile =self.currentDirectory + "/" + "data-test.json"
-            # self.jsonFile =self.currentDirectory + "/" + "data.json"
+            # self.jsonFile =self.currentDirectory + "/" + "data-test.json"
+            self.jsonFile =self.currentDirectory + "/" + "data.json"
             # self.jsonFile ="data-test.json"
             self.jsonObj = None
         else:
@@ -160,7 +160,7 @@ class bleClient:
             # _serializedData = str(len(_serializedData))+ ":"+_serializedData
             _serializedData = dt_string +_serializedData
             self.clientSocket.send(_serializedData)
-            logger.info("data 3")
+            logger.info("data 2")
             logger.info(_serializedData)
             time.sleep(0.5)
             logger.info("Sending data over bluetooth connection 2")
