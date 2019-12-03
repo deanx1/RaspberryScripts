@@ -59,25 +59,25 @@ if temperature is not None:
     print 'Temperatuur: {0:0.1f}*C'.format(temperature)
     print datetime.now()
 
-    with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'a+') as outfile:
+    with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'w+') as outfile:
       
-        # print outfile
-        # if os.stat('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json').st_size == 0:
-        #   print "FESFSEF"
-        #   j = {}
-        #   j["sensor"] = []
-        #   json.dump(j, outfile)
+        print outfile
+        if os.stat('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json').st_size == 0:
+          print "FESFSEF"
+          j = {}
+          j["sensor"] = []
+          json.dump(j, outfile)
 
-        # print "DIT" + outfile.read()
+        print "DIT" + outfile.read()
 
-        # j = json.loads(outfile.read())
-        # outfile.truncate(0)
-        # j["sensor"].append({
-        #     'temperature': temperature,
-        #     'datetime': str(datetime.now())
-        # })
-        # json.dump(j, outfile)
-        # print outfile
+        j = json.loads(outfile.read())
+        outfile.truncate(0)
+        j["sensor"].append({
+            'temperature': temperature,
+            'datetime': str(datetime.now())
+        })
+        json.dump(j, outfile)
+        print outfile
 
 else:
 
