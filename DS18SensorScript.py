@@ -68,6 +68,8 @@ if temperature is not None:
           j["sensor"] = []
           json.dump(j, outfile)
 
+        print "DIT" + outfile.read()
+
         j = json.loads(outfile.read())
         outfile.truncate(0)
         j["sensor"].append({
