@@ -59,7 +59,9 @@ if temperature is not None:
     print 'Temperatuur: {0:0.1f}*C'.format(temperature)
     print datetime.now()
 
-    with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'w+') as outfile:
+
+    open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'w+')  
+    with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'a+') as outfile:
       
         print outfile
         if os.stat('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json').st_size == 0:
