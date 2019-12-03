@@ -38,7 +38,8 @@ def read_temp():
 
 def checkIfFileExists():
     currentDirectory = (os.path.dirname(os.path.realpath(__file__)))
-    exists = os.path.is.file(currentDirectory + "/" + "BluetoothService/data.json")
+    # exists = os.path.is.file(currentDirectory + "/" + "BluetoothService/data.json")
+    exists = os.path.is.file('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json')
     print('checkIfFileExists:')
     print exists
     # return exists
