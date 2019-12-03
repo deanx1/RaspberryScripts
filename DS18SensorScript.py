@@ -48,6 +48,16 @@ def checkIfFileExists():
 temperature = read_temp()
 temperature = round(temperature, 2)
 checkIfFileExists()
+if(checkIfFileExists() == False) {
+  with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'a+') as outfile:
+    
+        jsonTemplate = {}
+        jsonTemplate["sensor"] = []
+        
+        json.dump(jsonTemplate, outfile)
+        print "HIERO"
+        print outfile
+}
 
 if temperature is not None:
 
