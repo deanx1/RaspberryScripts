@@ -68,17 +68,25 @@ if temperature is not None:
           print "FESFSEF"
           j = {}
           j["sensor"] = []
-          json.dump(j, outfile)
-
-        print "DIT" + outfile.read()
-
-        j = json.loads(outfile.read())
-        outfile.truncate(0)
-        j["sensor"].append({
+          j["sensor"].append({
             'temperature': temperature,
             'datetime': str(datetime.now())
-        })
-        json.dump(j, outfile)
+          })
+          json.dump(j, outfile)
+        else:
+          print "DIT" + outfile.read()
+
+          j = json.loads(outfile.read())
+          outfile.truncate(0)
+          j["sensor"].append({
+              'temperature': temperature,
+              'datetime': str(datetime.now())
+          })
+          json.dump(j, outfile)
+
+        
+
+        
         print outfile
 
 else:
