@@ -8,9 +8,6 @@ from datetime import datetime
 import json
 import os
 
-data = {}
-data['sensor'] = []
-
 base_dir = '/sys/bus/w1/devices/'
 device_folder = glob.glob(base_dir + '28*')[0]
 device_file = device_folder + '/w1_slave'
@@ -48,28 +45,29 @@ def checkIfFileExists():
 temperature = read_temp()
 temperature = round(temperature, 2)
 
-# if not checkIfFileExists():
-#   with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'a+') as outfile:
-#       jsonTemplate = {}
-#       jsonTemplate["sensor"] = []
+if not checkIfFileExists():
+  with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'a+') as outfile:
+      jsonTemplate = {}
+      jsonTemplate["sensor"] = []
         
-#       json.dump(jsonTemplate, outfile)
-#       print "HIERO"
-#       print outfile
+      json.dump(jsonTemplate, outfile)
+      print "HIERO"
+      print outfile
 
 if temperature is not None:
 
     print 'Temperatuur: {0:0.1f}*C'.format(temperature)
     print datetime.now()
 
-    data['sensor'].append({
-        'temperature': temperature,
-        'datetime': str(datetime.now())
-    })
-
     with open('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json', 'a+') as outfile:
+      
         print outfile
-        print "DIT " + outfile.st_size
+        if os.stat('/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json').st_size == 0:
+          print "FESFSEF"
+          j = {}
+          j["sensor"] = []
+          json.dump(j, outfile)
+
         j = json.loads(outfile.read())
         outfile.truncate(0)
         j["sensor"].append({
