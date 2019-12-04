@@ -1,5 +1,7 @@
 #!/usr/bin/python2
 
+# This script is for the sensor DHT11
+
 import Adafruit_DHT
 from datetime import datetime
 import json
@@ -29,4 +31,4 @@ if humidity is not None and temperature is not None:
   
 else:
 
-  print 'Geen data ontvangen'
+  print 'No data received'

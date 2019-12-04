@@ -13,6 +13,32 @@ import json #Uses JSON package
 import cPickle as pickle #Serializing and de-serializing a Python object structure
 from datetime import datetime
 from bluetooth import * #Python Bluetooth library
+import subprocess
+from threading import Thread
+
+class EverySoOften(Thread):
+    def __init__(self, seconds):
+        '''Note that when you override __init__, you must 
+           use super() to call __init__() in the base class
+           so you'll get all the "chocolately-goodness" of
+           threading (i.e., the magic that sets up the thread
+           within the OS) or it won't work.
+        '''        
+        super(EverySoOften, self).__init__() 
+        self.delay = seconds
+        self.is_done = False
+ 
+    def done(self):
+        self.is_done = True
+ 
+    def run(self):
+        while not self.is_done:
+            time.sleep(self.delay)
+            setDiscoverable()
+        print('thread done')
+
+t = EverySoOften(60)
+t.start()
 
 logger = logging.getLogger('bleClientLogger')
 
@@ -33,10 +59,21 @@ def startLogging(
     else:
         logging.basicConfig(level=default_level)
 
+# To make the pi always discoverable
+def setDiscoverable():
+    # logger.info("Setting discoverable to on")
+    cmd = 'sudo hciconfig hci0 piscan'
+    subprocess.check_output(cmd, shell = True )        
+
 class bleClient:
     def __init__(self, serverSocket=None, clientSocket=None):
+
+        # self.currentDirectory = os.getcwd()
+        self.currentDirectory = (os.path.dirname(os.path.realpath(__file__)))
+        logger.info("currentDirectory")
+        logger.info(self.currentDirectory + "/" + "data.json")
         if serverSocket is None:
-            logger.info("serverSocket is None")
+            logger.info("serverSocket is None1")
             # self.clientSocket = 11
             self.serverSocket = serverSocket
             self.clientSocket = clientSocket
@@ -45,12 +82,14 @@ class bleClient:
             self.uuid = "4b0164aa-1820-444e-83d4-3c702cfec373"
             self.serviceName="BluetoothServices"
             # self.jsonFile ="data.json"
-            self.jsonFile ="data-test.json"
+            # self.jsonFile =self.currentDirectory + "/" + "data-test.json"
+            self.jsonFile =self.currentDirectory + "/" + "data.json"
+            # self.jsonFile ="data-test.json"
             self.jsonObj = None
         else:
             self.serverSocket = serverSocket
             self.clientSocket = clientSocket
-            logger.info("serverSocket is not None")
+            logger.info("serverSocket is not None2")
 
     def getBluetoothSocket(self):
         try:
@@ -121,14 +160,21 @@ class bleClient:
             # _serializedData = str(len(_serializedData))+ ":"+_serializedData
             _serializedData = dt_string +_serializedData
             self.clientSocket.send(_serializedData)
+            logger.info("data 2")
+            logger.info(_serializedData)
             time.sleep(0.5)
             logger.info("Sending data over bluetooth connection 2")
             while True:
                 logger.info("Sending data over bluetooth connection 3")
-                dataRecv= self.clientSocket.recv(1024)
-                logger.info("Data: 4444")
-                logger.info("Data: " + dataRecv)
+                dataRecv = None
+                try:
+                    logger.info("data 3")
+                    logger.info(_serializedData)
+                    dataRecv= self.clientSocket.recv(1024)
+                except:
+                    logger.info("Android closed connection")
                 logger.info("Sending data over bluetooth connection 4")
+
                 if dataRecv in ['EmptyBufferResend', 'CorruptedBufferResend', 'DelimiterMissingBufferResend']:
                     logger.info("Sending data over bluetooth connection 5")
                     self.clientSocket.send(_serializedData)
@@ -177,16 +223,27 @@ class bleClient:
         serializedData = self.serializeData()
         # Sending data over bluetooth connection
         self.sendData(serializedData)
+        logger.info("send method done")
 
 
     def stop(self):
         # Disconnecting bluetooth service
         self.closeBluetoothSocket()
+    
+    def keepRunning(self):
+        # Disconnecting bluetooth service
+        while True:
+            logger.info("Keep running in loop")
+            bleClnt.start()
+            bleClnt.send()
+            
 
 if __name__ == '__main__':
+    setDiscoverable()
     startLogging()
     logger.info("Setup logging configuration")
     bleClnt = bleClient()
     bleClnt.start()
     bleClnt.send()
     bleClnt.stop()
+    bleClnt.keepRunning()
