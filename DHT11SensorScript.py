@@ -2,9 +2,12 @@
 
 # This script is for the sensor DHT11
 
+import glob
+import time
 import Adafruit_DHT
 from datetime import datetime
 import json
+import os
 
 data = {}
 data['sensor'] = [] 
