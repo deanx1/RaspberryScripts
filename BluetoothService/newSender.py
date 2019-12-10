@@ -63,7 +63,12 @@ def startLogging(
 def setDiscoverable():
     # logger.info("Setting discoverable to on")
     cmd = 'sudo hciconfig hci0 piscan'
-    subprocess.check_output(cmd, shell = True )        
+    subprocess.check_output(cmd, shell = True )
+
+def checkMonth():
+    # logger.info("Setting discoverable to on")
+    cmd = 'sudo hciconfig hci0 piscan'
+    subprocess.check_output(cmd, shell = True )    
 
 class bleClient:
     def __init__(self, serverSocket=None, clientSocket=None):
@@ -161,7 +166,7 @@ class bleClient:
             _serializedData = dt_string +_serializedData
             self.clientSocket.send(_serializedData)
             logger.info("data 2")
-            logger.info(_serializedData)
+            # logger.info(_serializedData)
             time.sleep(0.5)
             logger.info("Sending data over bluetooth connection 2")
             while True:
@@ -169,7 +174,7 @@ class bleClient:
                 dataRecv = None
                 try:
                     logger.info("data 3")
-                    logger.info(_serializedData)
+                    # logger.info(_serializedData)
                     dataRecv= self.clientSocket.recv(1024)
                 except:
                     logger.info("Android closed connection")

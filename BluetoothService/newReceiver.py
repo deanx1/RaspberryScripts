@@ -178,7 +178,7 @@ class bleServer:
 
     def deserializedData(self, _dataRecv):
         print "deserialiez"
-        print _dataRecv
+        # print _dataRecv
         # try:
         #     # self.dataObj=pickle.loads(_dataRecv)
         #     self.dataObj=json.load(_dataRecv)
@@ -221,7 +221,7 @@ class bleServer:
             # receive data
             dataRecv=self.recvData()
             print "recieve33"
-            print dataRecv
+            # print dataRecv
             # de-serializing data
             # self.deserializedData(dataRecv)
             # Writing json object to the file
