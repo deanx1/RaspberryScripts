@@ -1,6 +1,6 @@
-# Datamule Raspberry PI scripts
+# Bluetooth Services (PyBluez) with RFCOMM sockets
 
-The goal of the Datamule application is to get data from a Raspberry PI and Atos.
+This application connects two devices over Bluetooth and allows one to send messages to the other using json. The sending device runs belClient.py, and the receiving device runs bleServer.py
 
 ## Getting Started
 

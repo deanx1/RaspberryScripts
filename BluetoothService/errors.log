@@ -3274,3 +3274,626 @@ Traceback (most recent call last):
     self.clientSocket.send(_serializedData)
   File "<string>", line 5, in send
 BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-04 12:28:51,293] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 92, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-04 12:28:51,296] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 119, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-12-04 12:28:51,300] : [ERROR] : [bleServerLogger] : [bleReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "bleReceiver.py", line 141, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 12:43:39,026] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-12-04 12:49:18,589] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "newReceiver.py", line 59, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+AttributeError: bleServer instance has no attribute 'addr'
+[2019-12-04 12:49:18,590] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-12-04 12:51:42,795] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "newReceiver.py", line 59, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+AttributeError: bleServer instance has no attribute 'addr'
+[2019-12-04 12:51:42,797] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-12-04 13:00:43,161] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "newReceiver.py", line 59, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+AttributeError: bleServer instance has no attribute 'addr'
+[2019-12-04 13:00:43,162] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-12-04 13:02:50,556] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 171, in deserializedData
+    self.dataObj=pickle.loads(_dataRecv)
+TypeError: loads() argument 1 must be string, not None
+[2019-12-04 13:02:50,563] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 194, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:05:07,600] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 172, in deserializedData
+    self.dataObj=json.load(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 287, in load
+    return loads(fp.read(),
+AttributeError: 'NoneType' object has no attribute 'read'
+[2019-12-04 13:05:07,605] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 195, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:06:14,164] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 172, in deserializedData
+    self.dataObj=json.loads(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+[2019-12-04 13:06:14,180] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 195, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:07:16,841] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 173, in deserializedData
+    self.dataObj=json.loads(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+[2019-12-04 13:07:16,848] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 196, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:11:30,313] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 173, in deserializedData
+    self.dataObj=json.loads(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+[2019-12-04 13:11:30,320] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 196, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:14:25,450] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 175, in deserializedData
+    self.dataObj=json.loads(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+[2019-12-04 13:14:25,456] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 198, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:16:08,981] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 175, in deserializedData
+    self.dataObj=json.loads(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+[2019-12-04 13:16:08,988] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 198, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:17:18,290] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 177, in deserializedData
+    self.dataObj=json.loads(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+[2019-12-04 13:17:18,299] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 200, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:17:50,241] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 177, in deserializedData
+    self.dataObj=json.loads(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+[2019-12-04 13:17:50,251] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 200, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:18:27,353] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 178, in deserializedData
+    self.dataObj=json.loads(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+[2019-12-04 13:18:27,361] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 201, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:21:12,005] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 181, in deserializedData
+    self.dataObj=json.loads(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+[2019-12-04 13:21:12,012] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 204, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:23:35,188] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "newReceiver.py", line 61, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-12-04 13:23:35,194] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-12-04 13:24:29,384] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-12-04 13:26:58,401] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 184, in deserializedData
+    self.dataObj=json.loads(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+[2019-12-04 13:26:58,409] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 207, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:30:07,792] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 184, in deserializedData
+    self.dataObj=json.loads(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+[2019-12-04 13:30:07,801] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 207, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:36:03,397] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 185, in deserializedData
+    self.dataObj=json.loads(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 367, in decode
+    raise ValueError(errmsg("Extra data", s, end, len(s)))
+ValueError: Extra data: line 1 column 5 - line 1 column 162 (char 4 - 161)
+[2019-12-04 13:36:03,409] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 208, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:37:29,269] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [deserializedData] : Failed to de-serialized string ... 
+Traceback (most recent call last):
+  File "newReceiver.py", line 185, in deserializedData
+    self.dataObj=json.load(_dataRecv)
+  File "/usr/lib/python2.7/json/__init__.py", line 287, in load
+    return loads(fp.read(),
+AttributeError: 'str' object has no attribute 'read'
+[2019-12-04 13:37:29,276] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 208, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:40:04,460] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "newReceiver.py", line 61, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-12-04 13:40:04,465] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-12-04 13:40:47,364] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "newReceiver.py", line 61, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 199, in find_service
+    s.connect (addr)
+KeyboardInterrupt
+[2019-12-04 13:40:47,367] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-12-04 13:41:02,997] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 207, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:49:10,793] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 207, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:54:23,313] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 207, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 13:55:10,375] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 207, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 14:05:11,981] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [closeBluetoothSocket] : Failed to close the bluetooth sockets 
+Traceback (most recent call last):
+  File "newReceiver.py", line 207, in closeBluetoothSocket
+    self.serverSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 15:07:34,667] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 132, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-04 15:08:09,425] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "newSender.py", line 132, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-04 15:08:09,454] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "newSender.py", line 162, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-12-04 15:08:09,456] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "newSender.py", line 192, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-04 20:02:19,769] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothServices] : Couldn't find the RaspberryPi Bluetooth service : Invalid uuid
+Traceback (most recent call last):
+  File "newReceiver.py", line 61, in getBluetoothServices
+    bleService = find_service( uuid = self.uuid, address = self.addr )
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 202, in find_service
+    matches = s.search (uuid)
+KeyboardInterrupt
+[2019-12-04 20:02:19,772] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-12-04 20:02:30,275] : [ERROR] : [bleServerLogger] : [newReceiver.py] : [getBluetoothConnection] : Failed to connect to BLAH BLAH
+[2019-12-10 13:01:59,406] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 132, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 13:01:59,416] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 162, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 13:01:59,735] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 132, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 13:01:59,742] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 162, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 13:03:14,376] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 132, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 13:03:14,412] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 162, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-12-10 13:03:14,414] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 192, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-10 14:02:06,212] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 162, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (104, 'Connection reset by peer')
+[2019-12-10 15:00:51,937] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:00:51,964] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:00:52,299] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:00:52,332] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:03:48,926] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:03:48,935] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:03:49,677] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:03:49,708] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:03:50,308] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:03:50,317] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:03:50,796] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:03:50,804] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:14:52,855] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:14:52,899] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:14:53,651] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:14:53,687] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:14:54,171] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:14:54,199] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:14:54,645] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:14:54,682] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:14:54,992] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:14:55,027] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:14:55,185] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:14:55,221] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:14:55,359] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:14:55,369] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:14:55,523] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:14:55,563] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (107, 'Transport endpoint is not connected')
+[2019-12-10 15:16:40,608] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:16:40,660] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-12-10 15:16:40,664] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 197, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-10 15:21:53,796] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:21:53,837] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+  File "<string>", line 5, in send
+BluetoothError: (9, 'Bad file descriptor')
+[2019-12-10 15:26:03,583] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:26:03,625] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-12-10 15:26:03,628] : [ERROR] : [bleClientLogger] : [newSender.py] : [closeBluetoothSocket] : Failed to close the bluetooth client socket 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 197, in closeBluetoothSocket
+    self.clientSocket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+[2019-12-10 15:26:04,134] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:26:04,176] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
+[2019-12-10 15:26:04,321] : [ERROR] : [bleClientLogger] : [newSender.py] : [acceptBluetoothConnection] : Failed to accept bluetooth connection ... 
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 137, in acceptBluetoothConnection
+    self.clientSocket, clientInfo = self.serverSocket.accept()
+  File "/usr/lib/python2.7/dist-packages/bluetooth/bluez.py", line 129, in accept
+    client, addr = self._sock.accept ()
+KeyboardInterrupt
+[2019-12-10 15:26:04,357] : [ERROR] : [bleClientLogger] : [newSender.py] : [sendData] : Failed to send data over bluetooth connection
+Traceback (most recent call last):
+  File "/home/dean/Atos/RaspberryScripts/BluetoothService/newSender.py", line 167, in sendData
+    self.clientSocket.send(_serializedData)
+AttributeError: 'NoneType' object has no attribute 'send'
