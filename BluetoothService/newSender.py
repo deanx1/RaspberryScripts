@@ -61,19 +61,12 @@ def startLogging(
 
 # To make the pi always discoverable
 def setDiscoverable():
-    # logger.info("Setting discoverable to on")
     cmd = 'sudo hciconfig hci0 piscan'
-    subprocess.check_output(cmd, shell = True )
-
-# def checkMonth():
-#     # logger.info("Setting discoverable to on")
-#     cmd = 'sudo hciconfig hci0 piscan'
-#     subprocess.check_output(cmd, shell = True )    
+    subprocess.check_output(cmd, shell = True )   
 
 class bleClient:
     def __init__(self, serverSocket=None, clientSocket=None):
 
-        # self.currentDirectory = os.getcwd()
         self.currentDirectory = (os.path.dirname(os.path.realpath(__file__)))
         logger.info("currentDirectory")
         logger.info(self.currentDirectory + "/" + "data.json")
@@ -86,7 +79,6 @@ class bleClient:
             self.addr = None
             self.uuid = "4b0164aa-1820-444e-83d4-3c702cfec373"
             self.serviceName="BluetoothServices"
-            # self.jsonFile ="data.json"
             # self.jsonFile =self.currentDirectory + "/" + "data-test.json"
             self.jsonFile =self.currentDirectory + "/" + "data.json"
             self.jsonFileTempBackup =self.currentDirectory + "/" + "data-backup-temp.json"
@@ -132,7 +124,6 @@ class bleClient:
                             service_id = self.uuid,
                             service_classes = [ self.uuid, SERIAL_PORT_CLASS ],
                             profiles = [ SERIAL_PORT_PROFILE ],
-        #                   protocols = [ OBEX_UUID ]
                             )
             logger.info("%s advertised successfully ..." % (self.serviceName))
         except (Exception, BluetoothError, SystemExit, KeyboardInterrupt) as e:
@@ -150,8 +141,6 @@ class bleClient:
             jsonFileObj = open(self.jsonFile,"r")
             logger.info("File successfully uploaded to %s" % (jsonFileObj))
             self.jsonObj = json.load(jsonFileObj)
-            # Make backup
-            self.jsonTempBackupObj = json.load(jsonFileObj)
             logger.info("Content loaded successfully from the %s file" %(self.jsonFile))
             jsonFileObj.close()
         except (Exception, IOError) as e:
@@ -159,36 +148,43 @@ class bleClient:
 
     def placeBackup(self):
         #set data of slot 2 into backup-slot-3
-        with open(jsonFileBackup3, 'a+') as outfile:
+        with open(self.jsonFileBackup3, 'w') as outfile:
             try:
                 # Get data from slot 2
                 jsonFileSlot2Obj = open(self.jsonFileBackup2,"r")
                 self.jsonSlot2Obj = json.load(jsonFileSlot2Obj)
+
                 # Set data in slot 3
                 json.dump(self.jsonSlot2Obj, outfile)
             except (Exception, IOError) as e:
                 logger.error("Failed placing data for %s" % (self.jsonFileBackup3), exc_info=True)
 
         #set data of slot 1 into backup-slot-2
-        with open(jsonFileBackup2, 'a+') as outfile:
+        with open(self.jsonFileBackup2, 'w') as outfile:
             try:
                 # Get data from slot 1
                 jsonFileSlot1Obj = open(self.jsonFileBackup1,"r")
                 self.jsonSlot1Obj = json.load(jsonFileSlot1Obj)
+
                 # Set data in slot 2
                 json.dump(self.jsonSlot1Obj, outfile)
             except (Exception, IOError) as e:
                 logger.error("Failed placing data for %s" % (self.jsonFileBackup2), exc_info=True)
 
         #set jsonTempBackupObj into slot 1
-        with open(jsonFileBackup1, 'a+') as outfile:
+        with open(self.jsonFileBackup1, 'w') as outfile:
             try:
                 # Set jsonTempBackupObj in slot 1
-                json.dump(self.jsonTempBackupObj, outfile)
+                json.dump(self.jsonObj, outfile)
             except (Exception, IOError) as e:
                 logger.error("Failed placing data for %s" % (self.jsonFileBackup1), exc_info=True)
 
-        #TODO if sucessfull remove the data.json file
+        # Remove data.json
+        # on Pi
+        os.remove("/home/pi/Datamule/RaspberryScripts/BluetoothService/data.json")
+        # os.remove(self.currentDirectory + "/" + "data.json")
+        
+        
 
 
     def serializeData(self):
